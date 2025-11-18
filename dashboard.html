@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Mindful Sleep</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-moon"></i>
+                    <span>Mindful Sleep</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="schedule.html" class="nav-link">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="community.html" class="nav-link">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div class="welcome-section">
+                    <div class="avatar-section">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-info">
+                            <h1 class="welcome-text">Welcome back, <span class="user-name">Student</span>!</h1>
+                            <p class="user-subtitle">Let's continue your sleep science journey!</p>
+                        </div>
+                    </div>
+                    <div class="header-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">7</span>
+                                <span class="stat-label">Day Streak</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                
+                <!-- Learning Progress Card -->
+                <div class="dashboard-card progress-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Learning Progress
+                        </h2>
+                        <button class="btn btn-outline btn-sm">View All</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="overall-progress">
+                            <div class="progress-circle-container">
+                                <svg class="progress-circle" width="120" height="120">
+                                    <circle class="progress-bg" cx="60" cy="60" r="50"></circle>
+                                    <circle class="progress-fill" cx="60" cy="60" r="50" data-progress="70"></circle>
+                                </svg>
+                                <div class="progress-text">
+                                    <span class="progress-percentage">70%</span>
+                                    <span class="progress-label">Complete</span>
+                                </div>
+                            </div>
+                            <div class="progress-details">
+                                <h3>Emotional Balance and Sleep</h3>
+                                <p>Great progress! You're mastering the basics of teenage sleep science.</p>
+                                <div class="progress-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>9/12 Lessons</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>8/10 Quizzes</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>2 Certificates</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modules-progress">
+                            <h4>Module Progress</h4>
+                            <div class="module-list">
+                                <div class="module-item completed">
+                                    <div class="module-icon brain">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Brain Development & Sleep</h5>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span class="progress-text"></span>
+                                    </div>
+                                    <div class="module-status completed">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+
+                                <div class="module-item in-progress">
+                                    <div class="module-icon emotional">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Emotional Balance & Sleep</h5>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 60%"></div>
+                                        </div>
+                                        <span class="progress-text"></span>
+                                    </div>
+                                    <div class="module-status in-progress">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+
+                                <div class="module-item locked">
+                                    <div class="module-icon academic">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Academic Performance & Sleep</h5>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%"></div>
+                                        </div>
+                                        <span class="progress-text"></span>
+                                    </div>
+                                    <div class="module-status locked">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sleep Tracker Card -->
+                <div class="dashboard-card sleep-tracker-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-bed"></i>
+                            Sleep Tracker
+                        </h2>
+                        <div class="sleep-controls">
+                            <button class="btn btn-primary btn-sm" onclick="logSleep()">
+                                <i class="fas fa-plus"></i>
+                                Log Sleep
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="sleep-summary">
+                            <div class="sleep-average">
+                                <span class="average-number">8.2</span>
+                                <span class="average-label">Hours Avg</span>
+                                <div class="trend positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+0.5h from last week</span>
+                                </div>
+                            </div>
+                            <div class="sleep-quality">
+                                <div class="quality-indicator excellent">
+                                    <div class="quality-circle"></div>
+                                    <span>Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sleep-chart">
+                            <h4>Weekly Sleep Pattern</h4>
+                            <div class="chart-container">
+                                <div class="sleep-bars">
+                                    <div class="day-bar" data-day="Mon" data-hours="7.5">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill" style="height: 75%"></div>
+                                        </div>
+                                        <span class="day-label">Mon</span>
+                                        <span class="hours-label">7.5h</span>
+                                    </div>
+                                    <div class="day-bar" data-day="Tue" data-hours="8.2">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill good" style="height: 82%"></div>
+                                        </div>
+                                        <span class="day-label">Tue</span>
+                                        <span class="hours-label">8.2h</span>
+                                    </div>
+                                    <div class="day-bar" data-day="Wed" data-hours="6.8">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill low" style="height: 68%"></div>
+                                        </div>
+                                        <span class="day-label">Wed</span>
+                                        <span class="hours-label">6.8h</span>
+                                    </div>
+                                    <div class="day-bar" data-day="Thu" data-hours="8.5">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill excellent" style="height: 85%"></div>
+                                        </div>
+                                        <span class="day-label">Thu</span>
+                                        <span class="hours-label">8.5h</span>
+                                    </div>
+                                    <div class="day-bar" data-day="Fri" data-hours="9.1">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill excellent" style="height: 91%"></div>
+                                        </div>
+                                        <span class="day-label">Fri</span>
+                                        <span class="hours-label">9.1h</span>
+                                    </div>
+                                    <div class="day-bar" data-day="Sat" data-hours="8.8">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill excellent" style="height: 88%"></div>
+                                        </div>
+                                        <span class="day-label">Sat</span>
+                                        <span class="hours-label">8.8h</span>
+                                    </div>
+                                    <div class="day-bar today" data-day="Sun" data-hours="8.0">
+                                        <div class="sleep-bar">
+                                            <div class="sleep-fill good" style="height: 80%"></div>
+                                        </div>
+                                        <span class="day-label">Today</span>
+                                        <span class="hours-label">8.0h</span>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color excellent"></div>
+                                        <span>Excellent (8.5+ hours)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color good"></div>
+                                        <span>Good (7.5-8.5 hours)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color low"></div>
+                                        <span>Needs Improvement (<7.5 hours)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities Card -->
+                <div class="dashboard-card activities-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-clock"></i>
+                            Recent Activities
+                        </h2>
+                        <button class="btn btn-outline btn-sm">View All</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-timeline">
+                            <div class="activity-item completed">
+                                <div class="activity-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Completed: "REM Sleep and Memory"</h4>
+                                    <p>Brain Development & Sleep Module - Lesson 8</p>
+                                    <span class="activity-time"> 6 hours ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item quiz">
+                                <div class="activity-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Sleep Hygiene Quiz</h4>
+                                    <p>95% - Emotional Balance Module</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item session">
+                                <div class="activity-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Joined Study Group</h4>
+                                    <p>"Teen Sleep Patterns Discussion"</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item achievement">
+                                <div class="activity-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Achievement Unlocked!</h4>
+                                    <p>"Time Manager" - Attended 3 live sessions on time</p>
+                                    <span class="activity-time">4 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item sleep-log">
+                                <div class="activity-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Logged 7 days of full sleep tracking</h4>
+                                    <p>Personal best this week!</p>
+                                    <span class="activity-time">1 week ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals & Achievements Card -->
+                <div class="dashboard-card goals-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-target"></i>
+                            To-Do List
+                        </h2>
+                        <button class="btn btn-outline btn-sm">Manage Goals</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="goals-section">
+                            <h4>Current Goals</h4>
+                            <div class="goal-list">
+                                <div class="goal-item">
+                                    <div class="goal-header">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-bed"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h5>Sleep 8+ Hours Daily</h5>
+                                            <span class="goal-progress-text">6/7 days this week</span>
+                                        </div>
+                                        <div class="goal-percentage">86%</div>
+                                    </div>
+                                    <div class="goal-progress-bar">
+                                        <div class="goal-fill" style="width: 86%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-header">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h5>Complete Emotional Balance Module</h5>
+                                            <span class="goal-progress-text">6/10 lessons completed</span>
+                                        </div>
+                                        <div class="goal-percentage">60%</div>
+                                    </div>
+                                    <div class="goal-progress-bar">
+                                        <div class="goal-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-header">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h5>Join 3 Study Sessions</h5>
+                                            <span class="goal-progress-text">2/3 sessions attended</span>
+                                        </div>
+                                        <div class="goal-percentage">67%</div>
+                                    </div>
+                                    <div class="goal-progress-bar">
+                                        <div class="goal-fill" style="width: 67%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievements-section">
+                            <h4>Recent Achievements</h4>
+                            <div class="achievement-grid">
+                                <div class="achievement-badge earned">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5>Sleep Scientist</h5>
+                                    <p>Completed Brain Development module</p>
+                                </div>
+
+                                <div class="achievement-badge earned">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <h5>7-Day Streak</h5>
+                                    <p>Consistent sleep tracking</p>
+                                </div>
+
+                                <div class="achievement-badge in-progress">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5>Community Helper</h5>
+                                    <p>Help 5 students (2/5)</p>
+                                    <div class="badge-progress">
+                                        <div class="badge-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-badge locked">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h5>Sleep Master</h5>
+                                    <p>Complete all modules</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events Card -->
+                <div class="dashboard-card events-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-calendar-check"></i>
+                            Upcoming Events
+                        </h2>
+                        <button class="btn btn-outline btn-sm">View Calendar</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="events-list">
+                            <div class="event-item today">
+                                <div class="event-time">
+                                    <span class="time">2:00 PM</span>
+                                    <span class="date">Today</span>
+                                </div>
+                                <div class="event-content">
+                                    <h4>Sleep Science Q&A Session</h4>
+                                    <p>Interactive discussion with Alex Chen</p>
+                                    <div class="event-tags">
+                                        <span class="tag tutoring">Tutoring</span>
+                                        <span class="tag online">Online</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Join</button>
+                            </div>
+
+                            <div class="event-item">
+                                <div class="event-time">
+                                    <span class="time">10:00 AM</span>
+                                    <span class="date">Tomorrow</span>
+                                </div>
+                                <div class="event-content">
+                                    <h4>Brain Development Deep Dive</h4>
+                                    <p>Expert session with Dr. Maria Santos</p>
+                                    <div class="event-tags">
+                                        <span class="tag workshop">Workshop</span>
+                                        <span class="tag certificate">Certificate</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Remind Me</button>
+                            </div>
+
+                            <div class="event-item">
+                                <div class="event-time">
+                                    <span class="time">4:30 PM</span>
+                                    <span class="date">Wed</span>
+                                </div>
+                                <div class="event-content">
+                                    <h4>Sleep Hygiene Study Group</h4>
+                                    <p>Collaborative learning session</p>
+                                    <div class="event-tags">
+                                        <span class="tag study-group">Study Group</span>
+                                        <span class="tag interactive">Interactive</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card goals-card1">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-target"></i>
+                            To-Do List
+                        </h2>
+                        <button class="btn btn-outline btn-sm">Manage Goals</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="achievements-section">
+                            <h4>Recent Achievements</h4>
+                            <div class="achievement-grid">
+                                <div class="achievement-badge earned">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5>Sleep Scientist</h5>
+                                    <p>Completed Brain Development module</p>
+                                </div>
+
+                                <div class="achievement-badge earned">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <h5>7-Day Streak</h5>
+                                    <p>Consistent sleep tracking</p>
+                                </div>
+
+                                <div class="achievement-badge in-progress">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5>Community Helper</h5>
+                                    <p>Help 5 students (2/5)</p>
+                                    <div class="badge-progress">
+                                        <div class="badge-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-badge locked">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h5>Sleep Master</h5>
+                                    <p>Complete all modules</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon"></i>
+                        <span>Mindful Sleep</span>
+                    </div>
+                    <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindful Sleep. All rights reserved. Designed for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sleep Log Modal -->
+    <div id="sleepModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Log Your Sleep</h2>
+                <button class="modal-close" onclick="closeSleepModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="sleep-form">
+                    <div class="form-group">
+                        <label for="sleepDate">Date</label>
+                        <input type="date" id="sleepDate" name="sleepDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bedtime">Bedtime</label>
+                        <input type="time" id="bedtime" name="bedtime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="wakeTime">Wake Time</label>
+                        <input type="time" id="wakeTime" name="wakeTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sleepQuality">Sleep Quality</label>
+                        <select id="sleepQuality" name="sleepQuality" required>
+                            <option value="">Select quality</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Log Sleep</button>
+                        <button type="button" class="btn btn-outline" onclick="closeSleepModal()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Schedule - Sleep Hub</title>
+    <link rel="stylesheet" href="css/schedule.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-moon"></i>
+                    <span>Mindful Sleep</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="schedule.html" class="nav-link active">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="community.html" class="nav-link">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="schedule-main">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Live Sessions & Study Groups</h1>
+                    <p class="page-subtitle">Join peer-to-peer learning sessions and expert-led discussions about sleep science</p>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-filter="all">
+                    <i class="fas fa-calendar"></i>
+                    All Sessions
+                </button>
+                <button class="tab-btn" data-filter="tutoring">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Tutoring
+                </button>
+                <button class="tab-btn" data-filter="study-group">
+                    <i class="fas fa-users"></i>
+                    Study Groups
+                </button>
+                <button class="tab-btn" data-filter="workshop">
+                    <i class="fas fa-brain"></i>
+                    Workshops
+                </button>
+            </div>
+
+            <!-- Today's Sessions -->
+            <section class="schedule-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-calendar-day"></i>
+                        Today - November 22nd
+                    </h2>
+                    <span class="session-count">1 session available</span>
+                </div>
+
+                <div class="sessions-grid">
+                    <div class="session-card tutoring available" data-category="tutoring">
+                        <div class="session-header">
+                            <div class="session-time">
+                                <span class="time">11:00 AM</span>
+                                <span class="duration">60 min</span>
+                            </div>
+                            <div class="session-status available">
+                                <i class="fas fa-circle"></i>
+                                Available
+                            </div>
+                        </div>
+                        <div class="session-content">
+                            <h3>Sleep Environment Workshop</h3>
+                            <p>Learn how lighting, temperature, noise, and screen habits impact the quality of your sleep. This hands-on workshop helps you redesign your nighttime environment for deeper, healthier rest.</p>
+                            <div class="session-tags">
+                                <span class="tag type-workshop">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    WORKSHOP
+                                </span>
+                                <span class="tag level-beginner">
+                                    <i class="fas fa-signal"></i>
+                                    Beginner
+                                </span>
+                            </div>
+                            <div class="session-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>8/12 spots filled</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8 rating</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn btn-primary join-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Join Session
+                            </button>
+                            <button class="btn btn-outline info-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Sessions -->
+            <section class="schedule-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-calendar-plus"></i>
+                        Monday - November 24th
+                    </h2>
+                    <span class="session-count">4 sessions available</span>
+                </div>
+
+                <div class="sessions-grid">
+                    <div class="session-card tutoring available" data-category="tutoring">
+                        <div class="session-header">
+                            <div class="session-time">
+                                <span class="time">10:00 AM</span>
+                                <span class="duration">45 min</span>
+                            </div>
+                            <div class="session-status available">
+                                <i class="fas fa-circle"></i>
+                                Available
+                            </div>
+                        </div>
+                        <div class="session-content">
+                            <h3>Teen Brain Development Deep Dive</h3>
+                            <p>Explore how adolescent brain changes affect sleep patterns and learning capacity with Dr. Maria Santos</p>
+                            <div class="session-tags">
+                                <span class="tag type-tutoring">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    Expert Tutoring
+                                </span>
+                                <span class="tag level-intermediate">
+                                    <i class="fas fa-signal"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="session-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>3/10 spots filled</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certificate</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-video"></i>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn btn-primary join-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Join Session
+                            </button>
+                            <button class="btn btn-outline info-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="session-card study-group available" data-category="study-group">
+                        <div class="session-header">
+                            <div class="session-time">
+                                <span class="time">3:00 PM</span>
+                                <span class="duration">75 min</span>
+                            </div>
+                            <div class="session-status available">
+                                <i class="fas fa-circle"></i>
+                                Available
+                            </div>
+                        </div>
+                        <div class="session-content">
+                            <h3>Emotional Regulation & Sleep</h3>
+                            <p>Study group examining the connection between sleep quality and emotional well-being in teenagers</p>
+                            <div class="session-tags">
+                                <span class="tag type-study-group">
+                                    <i class="fas fa-users"></i>
+                                    Study Group
+                                </span>
+                                <span class="tag level-intermediate">
+                                    <i class="fas fa-signal"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="session-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>6/12 spots filled</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Emotional Focus</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-video"></i>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn btn-primary join-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Join Group
+                            </button>
+                            <button class="btn btn-outline info-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly Calendar View -->
+            <section class="calendar-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-calendar-week"></i>
+                        This Week's Overview
+                    </h2>
+                    <div class="calendar-controls">
+                        <button class="btn btn-outline btn-sm" onclick="previousWeek()">
+                            <i class="fas fa-chevron-left"></i>
+                            Previous
+                        </button>
+                        <span class="week-range">Nov 11 - Nov 17, 2025</span>
+                        <button class="btn btn-outline btn-sm" onclick="nextWeek()">
+                            Next
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <div class="day-header">Mon<span class="date">17</span></div>
+                        <div class="day-header">Tue<span class="date">18</span></div>
+                        <div class="day-header">Wed<span class="date">19</span></div>
+                        <div class="day-header">Thu<span class="date">20</span></div>
+                        <div class="day-header">Fri<span class="date">21</span></div>
+                        <div class="day-header weekend today">Sat<span class="date">22</span></div>
+                        <div class="day-header weekend">Sun<span class="date">23</span></div>
+                    </div>
+                    
+                    <div class="calendar-grid">
+                        <div class="day-cell past">
+                            <div class="session-mini tutoring">
+                                <span class="time">2:00 PM</span>
+                                <span class="title">Sleep Basics</span>
+                            </div>
+                        </div>
+                        <div class="day-cell past">
+                            <div class="session-mini workshop">
+                                <span class="time">6:00 PM</span>
+                                <span class="title">Relaxation Techniques</span>
+                            </div>
+                        </div>
+                        <div class="day-cell past">
+                            <div class="session-mini study-group">
+                                <span class="time">4:00 PM</span>
+                                <span class="title">Group Discussion</span>
+                            </div>
+                        </div>
+                        <div class="day-cell today">
+                            <div class="session-mini tutoring">
+                                <span class="time">2:00 PM</span>
+                                <span class="title">Q&A Session</span>
+                            </div>
+                            <div class="session-mini study-group">
+                                <span class="time">4:30 PM</span>
+                                <span class="title">Sleep Hygiene</span>
+                            </div>
+                            <div class="session-mini workshop">
+                                <span class="time">7:00 PM</span>
+                                <span class="title">Mindfulness</span>
+                            </div>
+                        </div>
+                        <div class="day-cell">
+                            <div class="session-mini tutoring">
+                                <span class="time">10:00 AM</span>
+                                <span class="title">Brain Development</span>
+                            </div>
+                            <div class="session-mini study-group">
+                                <span class="time">3:00 PM</span>
+                                <span class="title">Emotional Balance</span>
+                            </div>
+                        </div>
+                        <div class="day-cell weekend">
+                            <div class="session-mini workshop">
+                                <span class="time">11:00 AM</span>
+                                <span class="title">Sleep Environment</span>
+                            </div>
+                        </div>
+                        <div class="day-cell weekend">
+                            <span class="no-sessions">Rest Day</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Sessions -->
+            <section class="my-sessions-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-bookmark"></i>
+                        My Registered Sessions
+                    </h2>
+                    <span class="session-count">2 upcoming sessions</span>
+                </div>
+
+                <div class="my-sessions-list">
+                    <div class="my-session-card registered">
+                        <div class="session-info">
+                            <div class="session-badge registered">Registered</div>
+                            <h3>Sleep Basics</h3>
+                            <p class="session-meta">
+                                <i class="fas fa-calendar"></i>
+                                Monday at 2:00 PM - 60 minutes
+                            </p>
+                            <p class="session-description">Interactive discussion about REM sleep cycles and memory consolidation</p>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-video"></i>
+                                Join Now
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-danger-outline">
+                                <i class="fas fa-times"></i>
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="my-session-card registered">
+                        <div class="session-info">
+                            <div class="session-badge registered">Registered</div>
+                            <h3>Teen Brain Development Deep Dive</h3>
+                            <p class="session-meta">
+                                <i class="fas fa-calendar"></i>
+                                Tomorrow at 10:00 AM - 45 minutes
+                            </p>
+                            <p class="session-description">Explore how adolescent brain changes affect sleep patterns and learning capacity</p>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-bell"></i>
+                                Set Reminder
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-danger-outline">
+                                <i class="fas fa-times"></i>
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Host a Session CTA -->
+            <section class="host-cta-section">
+                <div class="host-cta-card">
+                    <div class="cta-content">
+                        <div class="cta-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="cta-text">
+                            <h2>Want to Host a Session?</h2>
+                            <p>Share your knowledge and help fellow students learn about sleep science and healthy habits. Become a peer tutor and make a difference in your community.</p>
+                        </div>
+                        <div class="cta-actions">
+                            <button class="btn btn-primary btn-large" onclick="openHostModal()">
+                                <i class="fas fa-plus"></i>
+                                Host a Session
+                            </button>
+                            <a href="#host-guide" class="btn btn-outline">
+                                <i class="fas fa-question-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cta-visual">
+                        <div class="floating-icons">
+                            <i class="fas fa-brain icon-1"></i>
+                            <i class="fas fa-users icon-2"></i>
+                            <i class="fas fa-moon icon-3"></i>
+                            <i class="fas fa-heart icon-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon"></i>
+                        <span>Sleep Hub</span>
+                    </div>
+                    <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sleep Hub. All rights reserved. Designed for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Host Session Modal (Hidden by default) -->
+    <div id="hostModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Host a Learning Session</h2>
+                <button class="modal-close" onclick="closeHostModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Share your knowledge with fellow students and help build our learning community!</p>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/schedule.js"></script>
+</body>
+</html>

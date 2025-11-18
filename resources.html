@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Resources - Mindful Sleep</title>
+    <link rel="stylesheet" href="css/resources.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-moon"></i>
+                    <span>Mindful Sleep</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="schedule.html" class="nav-link">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link active">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="community.html" class="nav-link">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resources-main">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Explore. Learn. Sleep Better.</h1>
+                    <p class="page-subtitle">Interactive tools, lessons, videos, quizzes, and materials to master the science of sleep for teenage brain growth and emotional balance</p>
+                </div>
+            </div>
+
+            <!-- Resource Navigation -->
+            <div class="resource-nav">
+                <button class="resource-filter active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    All Resources
+                </button>
+                <button class="resource-filter" data-filter="lessons">
+                    <i class="fas fa-book-open"></i>
+                    Lessons
+                </button>
+                <button class="resource-filter" data-filter="videos">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </button>
+                <button class="resource-filter" data-filter="quizzes">
+                    <i class="fas fa-question-circle"></i>
+                    Quizzes
+                </button>
+                <button class="resource-filter" data-filter="interactive">
+                    <i class="fas fa-gamepad"></i>
+                    Interactive Tools
+                </button>
+                <button class="resource-filter" data-filter="downloads">
+                    <i class="fas fa-download"></i>
+                    Downloads
+                </button>
+            </div>
+
+            <!-- Learning Modules -->
+            <section class="resources-section" id="modules">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Learning Modules
+                    </h2>
+                    <span class="resource-count">67 modules available</span>
+                </div>
+
+                <div class="modules-grid">
+                    <div class="module-card completed lessons" data-category="lessons">
+                        <div class="module-header">
+                            <div class="module-icon brain">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="module-progress">
+                                <div class="progress-ring completed">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="module-badge completed">Completed</div>
+                        </div>
+                        <div class="module-content">
+                            <h3>Brain Development & Sleep</h3>
+                            <p>During adolescence, your brain is changing faster than at almost any other time in your life. This module breaks down how sleep fuels that growth. You'll also get school-friendly explanations of things like REM sleep and brain waves.</p>
+                            <div class="module-stats">
+                                <span><i class="fas fa-play-circle"></i> 8 lessons</span>
+                                <span><i class="fas fa-clock"></i> 2.5 hours</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                                <span><i class="fas fa-users"></i> 234 students</span>
+                            </div>
+                            <div class="module-topics">
+                                <div class="topic-tag">How the teenage brain changes</div>
+                                <div class="topic-tag">Why sleep boosts memory</div>
+                                <div class="topic-tag">What happens during REM</div>
+                                <div class="topic-tag">How brain waves affect learning</div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-outline" onclick="reviewModule('brain')">
+                                <i class="fas fa-eye"></i>
+                                Review Module
+                            </button>
+                            <button class="btn btn-secondary" onclick="downloadCertificate('brain')">
+                                <i class="fas fa-download"></i>
+                                Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card in-progress lessons" data-category="lessons">
+                        <div class="module-header">
+                            <div class="module-icon emotional">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="module-progress">
+                                <div class="progress-ring" data-progress="70">
+                                    <svg class="progress-svg" width="60" height="60">
+                                        <circle class="progress-bg" cx="30" cy="30" r="25"></circle>
+                                        <circle class="progress-fill" cx="30" cy="30" r="25"></circle>
+                                    </svg>
+                                    <span class="progress-text">70%</span>
+                                </div>
+                            </div>
+                            <div class="module-badge in-progress">In Progress</div>
+                        </div>
+                        <div class="module-content">
+                            <h3>Emotional Balance & Sleep</h3>
+                            <p>This module focuses on something every teen feels, emotions that can switch fast. You'll learn how lack of sleep makes stress feel heavier, increase irritability, and affects anxiety.</p>
+                            <div class="module-stats">
+                                <span><i class="fas fa-play-circle"></i> 7/10 lessons</span>
+                                <span><i class="fas fa-clock"></i> 3 hours</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                                <span><i class="fas fa-users"></i> 189 students</span>
+                            </div>
+                            <div class="module-topics">
+                                <div class="topic-tag">Mood changes & sleep</div>
+                                <div class="topic-tag">Stress and the body</div>
+                                <div class="topic-tag">Sleep and anxiety</div>
+                                <div class="topic-tag">Healthy routines for mental balance</div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary" onclick="continueModule('emotional')">
+                                <i class="fas fa-play"></i>
+                                Continue Learning
+                            </button>
+                            <button class="btn btn-outline" onclick="viewProgress('emotional')">
+                                <i class="fas fa-chart-line"></i>
+                                View Progress
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card locked lessons" data-category="lessons">
+                        <div class="module-header">
+                            <div class="module-icon academic">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="module-progress">
+                                <div class="progress-ring locked">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="module-badge locked">Locked</div>
+                        </div>
+                        <div class="module-content">
+                            <h3>Academic Performance & Sleep</h3>
+                            <p>This module explains how sleep impacts the way you study, remember information, and perform on quizzes and exams .You'll learn why staying up late to "cram" works against you, and how small sleep changes can make concentration easier and shcoolwork less overwhelming.</p>
+                            <div class="module-stats">
+                                <span><i class="fas fa-play-circle"></i> 12 lessons</span>
+                                <span><i class="fas fa-clock"></i> 4 hours</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                                <span><i class="fas fa-users"></i> 312 enrolled</span>
+                            </div>
+                            <div class="module-topics">
+                                <div class="topic-tag">How sleep strengthens memories</div>
+                                <div class="topic-tag">Staying focused during the school day</div>
+                                <div class="topic-tag">Test performance & sleep habits</div>
+                                <div class="topic-tag">Smart study strategies you can use</div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-lock"></i>
+                                Complete Prerequisites
+                            </button>
+                            <button class="btn btn-outline" onclick="viewRequirements('academic')">
+                                <i class="fas fa-info-circle"></i>
+                                Requirements
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Tools -->
+            <section class="resources-section" id="interactive-tools">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-gamepad"></i>
+                        Interactive Learning Tools
+                    </h2>
+                    <span class="resource-count">6 tools available</span>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card interactive" data-category="interactive">
+                        <div class="tool-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Sleep Cycle Simulator</h3>
+                            <p>Interactive visualization of sleep stages and brain activity throughout the night. Explore how teenage sleep patterns differ from adults.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Interactive</span>
+                                <span class="feature-tag">Beginner</span>
+                                <span class="feature-tag">Real-time</span>
+                            </div>
+                            <div class="tool-stats">
+                                <span><i class="fas fa-users"></i> 1,247 users</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary tool-launch" onclick="launchTool('sleep-simulator')">
+                            <i class="fas fa-rocket"></i>
+                            Launch Tool
+                        </button>
+                    </div>
+
+                    <div class="tool-card interactive" data-category="interactive">
+                        <div class="tool-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Sleep Debt Calculator</h3>
+                            <p>Calculate your sleep debt and get personalized recommendations for recovery based on your age, schedule, and sleep patterns.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Calculator</span>
+                                <span class="feature-tag">Personalized</span>
+                                <span class="feature-tag">AI-Powered</span>
+                            </div>
+                            <div class="tool-stats">
+                                <span><i class="fas fa-users"></i> 892 users</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary tool-launch" onclick="launchTool('sleep-calculator')">
+                            <i class="fas fa-calculator"></i>
+                            Calculate Now
+                        </button>
+                    </div>
+
+                    <div class="tool-card interactive" data-category="interactive">
+                        <div class="tool-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Bedtime Optimizer</h3>
+                            <p>Find your optimal bedtime based on your schedule, natural circadian rhythm, and sleep needs. Perfect for teenagers.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Optimization</span>
+                                <span class="feature-tag">Adaptive</span>
+                                <span class="feature-tag">Smart</span>
+                            </div>
+                            <div class="tool-stats">
+                                <span><i class="fas fa-users"></i> 2,156 users</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary tool-launch" onclick="launchTool('bedtime-optimizer')">
+                            <i class="fas fa-magic"></i>
+                            Optimize Schedule
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Library -->
+            <section class="resources-section" id="video-library">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-video"></i>
+                        Video Lessons
+                    </h2>
+                    <span class="resource-count">12 videos available</span>
+                </div>
+
+                <div class="videos-grid">
+                    <div class="video-card videos" data-category="videos">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder brain-gradient">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-duration">12:45</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>The Science of REM Sleep</h3>
+                            <p>Dr. Sarah Johnson explains the importance of REM sleep for memory consolidation and brain development in teenagers</p>
+                            <div class="video-meta">
+                                <span class="video-instructor">
+                                    <i class="fas fa-user-md"></i>
+                                    Dr. Sarah Johnson
+                                </span>
+                                <span class="video-views">
+                                    <i class="fas fa-eye"></i>
+                                    1,247 views
+                                </span>
+                                <span class="video-rating">
+                                    <i class="fas fa-star"></i>
+                                    4.8
+                                </span>
+                            </div>
+                            <div class="video-tags">
+                                <span class="tag">REM Sleep</span>
+                                <span class="tag">Memory</span>
+                                <span class="tag">Neuroscience</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('rem-sleep')">
+                                <i class="fas fa-play"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('rem-sleep')">
+                                <i class="fas fa-plus"></i>
+                                Playlist
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="video-card videos" data-category="videos">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder teen-gradient">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-duration">8:30</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Teen Sleep Patterns Explained</h3>
+                            <p>Understanding why teenagers naturally stay up late and wake up later - the biological science behind circadian shifts</p>
+                            <div class="video-meta">
+                                <span class="video-instructor">
+                                    <i class="fas fa-user-md"></i>
+                                    Dr. Michael Chen
+                                </span>
+                                <span class="video-views">
+                                    <i class="fas fa-eye"></i>
+                                    892 views
+                                </span>
+                                <span class="video-rating">
+                                    <i class="fas fa-star"></i>
+                                    4.6
+                                </span>
+                            </div>
+                            <div class="video-tags">
+                                <span class="tag">Circadian Rhythm</span>
+                                <span class="tag">Teenagers</span>
+                                <span class="tag">Biology</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('teen-patterns')">
+                                <i class="fas fa-play"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('teen-patterns')">
+                                <i class="fas fa-plus"></i>
+                                Playlist
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="video-card videos" data-category="videos">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder sleep-gradient">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-duration">15:20</div>
+                            <div class="video-quality">4K</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Sleep Hygiene Masterclass</h3>
+                            <p>Comprehensive guide to creating the perfect sleep environment and routine for optimal teenage brain development</p>
+                            <div class="video-meta">
+                                <span class="video-instructor">
+                                    <i class="fas fa-user-md"></i>
+                                    Prof. Lisa Rodriguez
+                                </span>
+                                <span class="video-views">
+                                    <i class="fas fa-eye"></i>
+                                    2,156 views
+                                </span>
+                                <span class="video-rating">
+                                    <i class="fas fa-star"></i>
+                                    4.9
+                                </span>
+                            </div>
+                            <div class="video-tags">
+                                <span class="tag">Sleep Hygiene</span>
+                                <span class="tag">Environment</span>
+                                <span class="tag">Practical</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('sleep-hygiene')">
+                                <i class="fas fa-play"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('sleep-hygiene')">
+                                <i class="fas fa-plus"></i>
+                                Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Knowledge Quizzes -->
+            <section class="resources-section" id="quizzes">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle"></i>
+                        Knowledge Quizzes
+                    </h2>
+                    <span class="resource-count">8 quizzes available</span>
+                </div>
+
+                <div class="quizzes-grid">
+                    <div class="quiz-card quizzes" data-category="quizzes">
+                        <div class="quiz-header">
+                            <div class="quiz-icon beginner">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="quiz-difficulty beginner">
+                                <span class="difficulty-label">Beginner</span>
+                                <div class="difficulty-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-content">
+                            <h3>Sleep Stages Fundamentals</h3>
+                            <p>Test your understanding of the different stages of sleep and their functions in teenage brain development</p>
+                            <div class="quiz-stats">
+                                <span><i class="fas fa-question"></i> 15 questions</span>
+                                <span><i class="fas fa-clock"></i> 10 minutes</span>
+                                <span><i class="fas fa-trophy"></i> 25 XP</span>
+                                <span><i class="fas fa-users"></i> 1,324 taken</span>
+                            </div>
+                            <div class="quiz-preview">
+                                <h4>Topics Covered:</h4>
+                                <div class="topic-list">
+                                    <span>NREM Stages</span>
+                                    <span>REM Sleep</span>
+                                    <span>Sleep Architecture</span>
+                                    <span>Brain Waves</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="btn btn-primary" onclick="startQuiz('sleep-stages')">
+                                <i class="fas fa-play-circle"></i>
+                                Start Quiz
+                            </button>
+                            <button class="btn btn-outline" onclick="previewQuiz('sleep-stages')">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card quizzes completed" data-category="quizzes">
+                        <div class="quiz-header">
+                            <div class="quiz-icon intermediate">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="quiz-difficulty intermediate">
+                                <span class="difficulty-label">Intermediate</span>
+                                <div class="difficulty-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="quiz-completed-badge">
+                                <i class="fas fa-check-circle"></i>
+                                95% Score
+                            </div>
+                        </div>
+                        <div class="quiz-content">
+                            <h3>Sleep & Emotional Health</h3>
+                            <p>Explore the connection between sleep quality and emotional well-being during adolescence</p>
+                            <div class="quiz-stats">
+                                <span><i class="fas fa-question"></i> 20 questions</span>
+                                <span><i class="fas fa-clock"></i> 15 minutes</span>
+                                <span><i class="fas fa-trophy"></i> 40 XP</span>
+                                <span><i class="fas fa-users"></i> 892 taken</span>
+                            </div>
+                            <div class="quiz-results">
+                                <div class="result-item">
+                                    <span class="result-label">Your Score:</span>
+                                    <span class="result-value excellent">95%</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Completed:</span>
+                                    <span class="result-value">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="btn btn-outline" onclick="reviewQuiz('emotional-health')">
+                                <i class="fas fa-eye"></i>
+                                Review Answers
+                            </button>
+                            <button class="btn btn-secondary" onclick="retakeQuiz('emotional-health')">
+                                <i class="fas fa-redo"></i>
+                                Retake Quiz
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card quizzes locked" data-category="quizzes">
+                        <div class="quiz-header">
+                            <div class="quiz-icon advanced">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="quiz-difficulty advanced">
+                                <span class="difficulty-label">Advanced</span>
+                                <div class="difficulty-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-content">
+                            <h3>Sleep Research & Studies</h3>
+                            <p>Advanced quiz on sleep research findings and their implications for teenage health and development</p>
+                            <div class="quiz-stats">
+                                <span><i class="fas fa-question"></i> 25 questions</span>
+                                <span><i class="fas fa-clock"></i> 20 minutes</span>
+                                <span><i class="fas fa-trophy"></i> 60 XP</span>
+                                <span><i class="fas fa-users"></i> 234 enrolled</span>
+                            </div>
+                            <div class="quiz-requirements">
+                                <h4>Requirements:</h4>
+                                <div class="requirement-list">
+                                    <span class="requirement completed">
+                                        <i class="fas fa-check"></i>
+                                        Complete Brain Development module
+                                    </span>
+                                    <span class="requirement pending">
+                                        <i class="fas fa-clock"></i>
+                                        Complete Emotional Balance module
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-lock"></i>
+                                Complete Prerequisites
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Downloadable Resources -->
+            <section class="resources-section" id="downloads">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-download"></i>
+                        Downloadable Resources
+                    </h2>
+                    <span class="resource-count">12 files available</span>
+                </div>
+
+                <div class="downloads-grid">
+                    <div class="download-card downloads" data-category="downloads">
+                        <div class="download-icon pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="download-content">
+                            <h3>Sleep Science Study Guide</h3>
+                            <p>Comprehensive 20-page guide covering all key concepts in teenage sleep science and brain development</p>
+                            <div class="download-meta">
+                                <span class="file-info">
+                                    <i class="fas fa-file"></i>
+                                    PDF � 2.5 MB
+                                </span>
+                                <span class="download-count">
+                                    <i class="fas fa-download"></i>
+                                    1,247 downloads
+                                </span>
+                                <span class="last-updated">
+                                    <i class="fas fa-calendar"></i>
+                                    Updated Nov 2025
+                                </span>
+                            </div>
+                            <div class="download-features">
+                                <span class="feature-tag">Printable</span>
+                                <span class="feature-tag">Comprehensive</span>
+                                <span class="feature-tag">Updated</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary download-btn" onclick="downloadFile('study-guide')">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </button>
+                    </div>
+
+                    <div class="download-card downloads" data-category="downloads">
+                        <div class="download-icon excel">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="download-content">
+                            <h3>Sleep Tracking Worksheet</h3>
+                            <p>Monthly sleep diary template to track patterns, identify improvements, and monitor progress over time</p>
+                            <div class="download-meta">
+                                <span class="file-info">
+                                    <i class="fas fa-file"></i>
+                                    Excel � 45 KB
+                                </span>
+                                <span class="download-count">
+                                    <i class="fas fa-download"></i>
+                                    892 downloads
+                                </span>
+                                <span class="last-updated">
+                                    <i class="fas fa-calendar"></i>
+                                    Printable Version
+                                </span>
+                            </div>
+                            <div class="download-features">
+                                <span class="feature-tag">Excel Format</span>
+                                <span class="feature-tag">Customizable</span>
+                                <span class="feature-tag">Monthly</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary download-btn" onclick="downloadFile('sleep-tracker')">
+                            <i class="fas fa-download"></i>
+                            Download Excel
+                        </button>
+                    </div>
+
+                    <div class="download-card downloads" data-category="downloads">
+                        <div class="download-icon image">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <div class="download-content">
+                            <h3>Sleep Hygiene Infographic</h3>
+                            <p>Visual guide to healthy sleep habits designed for easy sharing and classroom use</p>
+                            <div class="download-meta">
+                                <span class="file-info">
+                                    <i class="fas fa-file"></i>
+                                    PNG � 1.2 MB
+                                </span>
+                                <span class="download-count">
+                                    <i class="fas fa-download"></i>
+                                    2,156 downloads
+                                </span>
+                                <span class="last-updated">
+                                    <i class="fas fa-calendar"></i>
+                                    High Resolution
+                                </span>
+                            </div>
+                            <div class="download-features">
+                                <span class="feature-tag">High-Res</span>
+                                <span class="feature-tag">Shareable</span>
+                                <span class="feature-tag">Visual</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary download-btn" onclick="downloadFile('infographic')">
+                            <i class="fas fa-download"></i>
+                            Download PNG
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Learning Progress -->
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon"></i>
+                        <span>Mindful Sleep</span>
+                    </div>
+                    <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindful Sleep. All rights reserved. Designed for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tool Modal -->
+    <div id="toolModal" class="modal hidden">
+        <div class="modal-content tool-modal">
+            <div class="modal-header">
+                <h2 id="toolModalTitle">Interactive Tool</h2>
+                <button class="modal-close" onclick="closeTool()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="toolContainer" class="tool-container">
+                    <!-- Tool content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoModal" class="modal hidden">
+        <div class="modal-content video-modal">
+            <div class="modal-header">
+                <h2 id="videoModalTitle">Video Player</h2>
+                <button class="modal-close" onclick="closeVideo()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="videoContainer" class="video-container">
+                    <!-- Video content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/resources.js"></script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Mindful Sleep</title>
+    <link rel="stylesheet" href="css/community.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-moon"></i>
+                    <span>Mindful Sleep</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="schedule.html" class="nav-link">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="community.html" class="nav-link active">Community</a>
+                    </li>
+                   <li class="nav-item">
+                        <a href="schedule.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="community-main">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Student Sleep Science Community</h1>
+                    <p class="page-subtitle">Connect with fellow students, share experiences, learn from peers, and support each other's journey to better sleep and academic success</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">120</span>
+                        <span class="stat-label">Discussions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">45</span>
+                        <span class="stat-label">Study Groups</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Navigation -->
+            <div class="community-nav">
+                <button class="community-filter active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    All Activity
+                </button>
+                <button class="community-filter" data-filter="discussions">
+                    <i class="fas fa-comments"></i>
+                    Discussions
+                </button>
+                <button class="community-filter" data-filter="tutoring">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Peer Tutoring
+                </button>
+                <button class="community-filter" data-filter="success-stories">
+                    <i class="fas fa-trophy"></i>
+                    Success Stories
+                </button>
+                <button class="community-filter" data-filter="study-groups">
+                    <i class="fas fa-users"></i>
+                    Study Groups
+                </button>
+            </div>
+
+            <!-- Main Community Content -->
+            <div class="community-grid">
+                
+                <!-- Left Sidebar - Quick Actions -->
+                <aside class="community-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <button class="action-btn primary" onclick="startNewDiscussion()">
+                                <i class="fas fa-plus"></i>
+                                Start Discussion
+                            </button>
+                            <button class="action-btn secondary" onclick="offerTutoring()">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Offer Tutoring
+                            </button>
+                            <button class="action-btn tertiary" onclick="shareSuccessStory()">
+                                <i class="fas fa-star"></i>
+                                Share Success Story
+                            </button>
+                            <button class="action-btn quaternary" onclick="joinStudyGroup()">
+                                <i class="fas fa-users"></i>
+                                Find Study Group
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Community Guidelines</h3>
+                        <div class="guidelines">
+                            <div class="guideline-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Be supportive and encouraging</span>
+                            </div>
+                            <div class="guideline-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Share your experiences openly</span>
+                            </div>
+                            <div class="guideline-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Help others when you can</span>
+                            </div>
+                            <div class="guideline-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Respect everyone's privacy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Active Study Buddies</h3>
+                        <div class="study-buddies">
+                            <div class="buddy-item">
+                                <div class="buddy-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="buddy-info">
+                                    <h4>Alex Chen</h4>
+                                    <p>Sleep Science Expert</p>
+                                    <span class="status online">Online</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline" onclick="messageBuddy('alex')">
+                                    <i class="fas fa-message"></i>
+                                </button>
+                            </div>
+                            <div class="buddy-item">
+                                <div class="buddy-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="buddy-info">
+                                    <h4>Maria Santos</h4>
+                                    <p>Brain Development Tutor</p>
+                                    <span class="status online">Online</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline" onclick="messageBuddy('maria')">
+                                    <i class="fas fa-message"></i>
+                                </button>
+                            </div>
+                            <div class="buddy-item">
+                                <div class="buddy-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="buddy-info">
+                                    <h4>Jordan Kim</h4>
+                                    <p>Emotional Balance Coach</p>
+                                    <span class="status away">Away</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline" onclick="messageBuddy('jordan')">
+                                    <i class="fas fa-message"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="community-content">
+                    
+                    <!-- Discussion Forums -->
+                    <section class="community-section discussions" data-category="discussions">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-comments"></i>
+                                Recent Discussions
+                            </h2>
+                            <button class="btn btn-primary btn-sm" onclick="startNewDiscussion()">
+                                <i class="fas fa-plus"></i>
+                                New Discussion
+                            </button>
+                        </div>
+
+                        <div class="discussions-list">
+                            <div class="discussion-card hot">
+                                <div class="discussion-header">
+                                    <div class="discussion-meta">
+                                        <div class="author-info">
+                                            <div class="author-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="author-details">
+                                                <h4>Sarah M.</h4>
+                                                <span class="post-time">2 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="discussion-tags">
+                                            <span class="tag hot">Hot</span>
+                                            <span class="tag category">Sleep Tips</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>How do you deal with late-night study stress?</h3>
+                                    <p>I've been studying for finals and find myself staying up way too late because I'm anxious about not knowing enough. This is messing up my sleep schedule completely. Has anyone found good strategies for managing study anxiety while maintaining healthy sleep habits?</p>
+                                    <div class="discussion-engagement">
+                                        <button class="engagement-btn" onclick="likePost('discussion-1')">
+                                            <i class="fas fa-heart"></i>
+                                            <span>24</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="replyToPost('discussion-1')">
+                                            <i class="fas fa-reply"></i>
+                                            <span>12 replies</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="sharePost('discussion-1')">
+                                            <i class="fas fa-share"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="recent-replies">
+                                    <div class="reply-preview">
+                                        <div class="reply-author">
+                                            <i class="fas fa-user"></i>
+                                            <span>Marcus T.</span>
+                                        </div>
+                                        <p>"I use the 20-20-20 rule: study for 20 min, take 20 sec break, look at something 20 ft away. Helps reduce anxiety!"</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="discussion-card">
+                                <div class="discussion-header">
+                                    <div class="discussion-meta">
+                                        <div class="author-info">
+                                            <div class="author-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="author-details">
+                                                <h4>Alex Chen</h4>
+                                                <span class="post-time">5 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="discussion-tags">
+                                            <span class="tag category">Brain Development</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>Amazing fact about REM sleep and memory!</h3>
+                                    <p>Just learned in our brain development module that during REM sleep, our brains replay the day's learning up to 20 times faster than when we were awake! No wonder I remember things better after a good night's sleep. Anyone else notice this?</p>
+                                    <div class="discussion-engagement">
+                                        <button class="engagement-btn" onclick="likePost('discussion-2')">
+                                            <i class="fas fa-heart"></i>
+                                            <span>18</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="replyToPost('discussion-2')">
+                                            <i class="fas fa-reply"></i>
+                                            <span>8 replies</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="sharePost('discussion-2')">
+                                            <i class="fas fa-share"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="discussion-card">
+                                <div class="discussion-header">
+                                    <div class="discussion-meta">
+                                        <div class="author-info">
+                                            <div class="author-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="author-details">
+                                                <h4>Emily R.</h4>
+                                                <span class="post-time">1 day ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="discussion-tags">
+                                            <span class="tag category">Sleep Environment</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>Room setup for better sleep - what works?</h3>
+                                    <p>I'm trying to optimize my bedroom for better sleep. Currently using blackout curtains and a white noise app. What other changes have you made that actually helped improve your sleep quality?</p>
+                                    <div class="discussion-engagement">
+                                        <button class="engagement-btn" onclick="likePost('discussion-3')">
+                                            <i class="fas fa-heart"></i>
+                                            <span>15</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="replyToPost('discussion-3')">
+                                            <i class="fas fa-reply"></i>
+                                            <span>22 replies</span>
+                                        </button>
+                                        <button class="engagement-btn" onclick="sharePost('discussion-3')">
+                                            <i class="fas fa-share"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Peer Tutoring Section -->
+                    <section class="community-section tutoring" data-category="tutoring">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Peer Tutoring
+                            </h2>
+                            <button class="btn btn-secondary btn-sm" onclick="offerTutoring()">
+                                <i class="fas fa-plus"></i>
+                                Offer Help
+                            </button>
+                        </div>
+
+                        <div class="tutoring-grid">
+                            <div class="tutor-card available">
+                                <div class="tutor-header">
+                                    <div class="tutor-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="tutor-info">
+                                        <h3>Maria Santos</h3>
+                                        <p class="tutor-expertise">Brain Development Specialist</p>
+                                        <div class="tutor-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="rating-score">5.0 (23 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tutor-status available">
+                                        <i class="fas fa-circle"></i>
+                                        Available Now
+                                    </div>
+                                </div>
+                                <div class="tutor-content">
+                                    <div class="expertise-tags">
+                                        <span class="expertise-tag">Neuroplasticity</span>
+                                        <span class="expertise-tag">Memory Formation</span>
+                                        <span class="expertise-tag">REM Sleep</span>
+                                    </div>
+                                    <p class="tutor-bio">Hi! I'm passionate about how sleep affects teenage brain development. Completed all modules with distinction and love helping others understand these concepts!</p>
+                                    <div class="tutor-stats">
+                                        <span><i class="fas fa-clock"></i> 45 hours tutored</span>
+                                        <span><i class="fas fa-users"></i> 18 students helped</span>
+                                        <span><i class="fas fa-award"></i> 95% success rate</span>
+                                    </div>
+                                </div>
+                                <div class="tutor-actions">
+                                    <button class="btn btn-primary" onclick="requestTutoring('maria', 'brain-development')">
+                                        <i class="fas fa-calendar"></i>
+                                        Book Session
+                                    </button>
+                                    <button class="btn btn-outline" onclick="messageTutor('maria')">
+                                        <i class="fas fa-message"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="tutor-card busy">
+                                <div class="tutor-header">
+                                    <div class="tutor-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="tutor-info">
+                                        <h3>Jordan Kim</h3>
+                                        <p class="tutor-expertise">Emotional Balance Coach</p>
+                                        <div class="tutor-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span class="rating-score">4.8 (31 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tutor-status busy">
+                                        <i class="fas fa-circle"></i>
+                                        In Session
+                                    </div>
+                                </div>
+                                <div class="tutor-content">
+                                    <div class="expertise-tags">
+                                        <span class="expertise-tag">Mood Regulation</span>
+                                        <span class="expertise-tag">Stress Management</span>
+                                        <span class="expertise-tag">Anxiety</span>
+                                    </div>
+                                    <p class="tutor-bio">Experienced in helping students understand the connection between sleep and emotional health. I struggled with this myself and found strategies that really work!</p>
+                                    <div class="tutor-stats">
+                                        <span><i class="fas fa-clock"></i> 62 hours tutored</span>
+                                        <span><i class="fas fa-users"></i> 25 students helped</span>
+                                        <span><i class="fas fa-award"></i> 92% success rate</span>
+                                    </div>
+                                </div>
+                                <div class="tutor-actions">
+                                    <button class="btn btn-disabled" disabled>
+                                        <i class="fas fa-clock"></i>
+                                        Currently Busy
+                                    </button>
+                                    <button class="btn btn-outline" onclick="messageTutor('jordan')">
+                                        <i class="fas fa-message"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="tutor-card available">
+                                <div class="tutor-header">
+                                    <div class="tutor-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="tutor-info">
+                                        <h3>Taylor Johnson</h3>
+                                        <p class="tutor-expertise">Academic Performance Guide</p>
+                                        <div class="tutor-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span class="rating-score">4.7 (15 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tutor-status available">
+                                        <i class="fas fa-circle"></i>
+                                        Available Now
+                                    </div>
+                                </div>
+                                <div class="tutor-content">
+                                    <div class="expertise-tags">
+                                        <span class="expertise-tag">Study Strategies</span>
+                                        <span class="expertise-tag">Memory Consolidation</span>
+                                        <span class="expertise-tag">Focus</span>
+                                    </div>
+                                    <p class="tutor-bio">I improved my GPA from 2.8 to 3.9 just by optimizing my sleep schedule! Happy to share what I learned about sleep and academic performance.</p>
+                                    <div class="tutor-stats">
+                                        <span><i class="fas fa-clock"></i> 28 hours tutored</span>
+                                        <span><i class="fas fa-users"></i> 12 students helped</span>
+                                        <span><i class="fas fa-award"></i> 98% success rate</span>
+                                    </div>
+                                </div>
+                                <div class="tutor-actions">
+                                    <button class="btn btn-primary" onclick="requestTutoring('taylor', 'academic-performance')">
+                                        <i class="fas fa-calendar"></i>
+                                        Book Session
+                                    </button>
+                                    <button class="btn btn-outline" onclick="messageTutor('taylor')">
+                                        <i class="fas fa-message"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Success Stories Section -->
+                    <section class="community-section success-stories" data-category="success-stories">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i>
+                                Success Stories
+                            </h2>
+                            <button class="btn btn-accent btn-sm" onclick="shareSuccessStory()">
+                                <i class="fas fa-star"></i>
+                                Share Your Story
+                            </button>
+                        </div>
+
+                        <div class="stories-grid">
+                            <div class="story-card featured">
+                                <div class="story-badge featured">Featured Story</div>
+                                <div class="story-header">
+                                    <div class="story-author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h3>Marcus Thompson</h3>
+                                            <p class="author-grade">High School Senior</p>
+                                            <span class="story-date">1 week ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="story-metrics">
+                                        <div class="metric">
+                                            <span class="metric-value">+1.2</span>
+                                            <span class="metric-label">GPA Increase</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-value">2.5hrs</span>
+                                            <span class="metric-label">More Sleep</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-content">
+                                    <h3>From 5 Hours to 8.5 Hours: My Sleep Transformation Journey</h3>
+                                    <p>When I started using Mindful Sleep, I was averaging 5 hours of sleep and my GPA was 2.3. I thought sleeping was for lazy people. After learning about neuroplasticity and memory consolidation, everything changed. I gradually shifted my bedtime earlier, created a wind-down routine, and optimized my study schedule around my sleep needs.</p>
+                                    <p><strong>The results were incredible:</strong> My GPA jumped from 2.3 to 3.5 in just one semester! I feel more focused, less anxious, and actually enjoy learning now. The sleep science modules helped me understand WHY sleep matters, and the community kept me motivated during tough moments.</p>
+                                    <div class="story-highlights">
+                                        <div class="highlight">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <span>Key insight: Sleep is when your brain files away what you learned</span>
+                                        </div>
+                                        <div class="highlight">
+                                            <i class="fas fa-target"></i>
+                                            <span>Main strategy: Consistent bedtime, even on weekends</span>
+                                        </div>
+                                        <div class="highlight">
+                                            <i class="fas fa-heart"></i>
+                                            <span>Best part: Feeling proud of taking care of myself</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-engagement">
+                                    <button class="engagement-btn" onclick="likeStory('story-1')">
+                                        <i class="fas fa-heart"></i>
+                                        <span>47 likes</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="commentOnStory('story-1')">
+                                        <i class="fas fa-comment"></i>
+                                        <span>12 comments</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="shareStory('story-1')">
+                                        <i class="fas fa-share"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-header">
+                                    <div class="story-author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h3>Lisa Chen</h3>
+                                            <p class="author-grade">High School Junior</p>
+                                            <span class="story-date">3 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="story-metrics">
+                                        <div class="metric">
+                                            <span class="metric-value">85%</span>
+                                            <span class="metric-label">Less Anxiety</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-value">30</span>
+                                            <span class="metric-label">Days Consistent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-content">
+                                    <h3>How Sleep Helped Me Beat Test Anxiety</h3>
+                                    <p>I used to have terrible test anxiety - my heart would race, I'd forget everything I studied. Learning about sleep's role in emotional regulation was a game-changer. Now I prioritize 8+ hours before any test, and my anxiety is so much more manageable. My test scores improved by an average of 15 points!</p>
+                                    <div class="story-highlights">
+                                        <div class="highlight">
+                                            <i class="fas fa-brain"></i>
+                                            <span>Sleep helps regulate the amygdala (fear center)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-engagement">
+                                    <button class="engagement-btn" onclick="likeStory('story-2')">
+                                        <i class="fas fa-heart"></i>
+                                        <span>23 likes</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="commentOnStory('story-2')">
+                                        <i class="fas fa-comment"></i>
+                                        <span>8 comments</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="shareStory('story-2')">
+                                        <i class="fas fa-share"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-header">
+                                    <div class="story-author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h3>David Rodriguez</h3>
+                                            <p class="author-grade">High School Sophomore</p>
+                                            <span class="story-date">5 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="story-metrics">
+                                        <div class="metric">
+                                            <span class="metric-value">3x</span>
+                                            <span class="metric-label">Better Focus</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-value">21</span>
+                                            <span class="metric-label">Day Streak</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-content">
+                                    <h3>From Night Owl to Morning Person: My Circadian Rhythm Reset</h3>
+                                    <p>I was a hardcore night owl, staying up until 2 AM and struggling in morning classes. The circadian rhythm lessons showed me how light exposure affects melatonin production. I started using bright light therapy in the morning and dim lighting at night. Now I naturally wake up at 6:30 AM feeling refreshed!</p>
+                                    <div class="story-highlights">
+                                        <div class="highlight">
+                                            <i class="fas fa-sun"></i>
+                                            <span>Morning light exposure is key to shifting your rhythm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-engagement">
+                                    <button class="engagement-btn" onclick="likeStory('story-3')">
+                                        <i class="fas fa-heart"></i>
+                                        <span>31 likes</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="commentOnStory('story-3')">
+                                        <i class="fas fa-comment"></i>
+                                        <span>14 comments</span>
+                                    </button>
+                                    <button class="engagement-btn" onclick="shareStory('story-3')">
+                                        <i class="fas fa-share"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Study Groups Section -->
+                    <section class="community-section study-groups" data-category="study-groups">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-users"></i>
+                                Active Study Groups
+                            </h2>
+                            <button class="btn btn-quaternary btn-sm" onclick="createStudyGroup()">
+                                <i class="fas fa-plus"></i>
+                                Create Group
+                            </button>
+                        </div>
+
+                        <div class="study-groups-grid">
+                            <div class="group-card active" data-group="study-squad">
+                                <div class="group-header">
+                                    <div class="group-info">
+                                        <h3>Sleep Science Study Squad</h3>
+                                        <p class="group-focus">Brain Development Module</p>
+                                        <div class="group-schedule">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Tuesdays & Thursdays, 7 PM EST</span>
+                                        </div>
+                                    </div>
+                                    <div class="group-status active">
+                                        <i class="fas fa-circle"></i>
+                                        Active
+                                    </div>
+                                </div>
+                                <div class="group-content">
+                                    <div class="group-description">
+                                        <p>We're currently working through the brain development module together! Great mix of visual learners and note-takers. We quiz each other and share different ways to remember complex concepts.</p>
+                                    </div>
+                                    <div class="group-stats">
+                                        <span><i class="fas fa-users"></i> 8/10 members</span>
+                                        <span><i class="fas fa-clock"></i> 3 weeks active</span>
+                                        <span><i class="fas fa-star"></i> 4.8 rating</span>
+                                        <span><i class="fas fa-graduation-cap"></i> Beginner-friendly</span>
+                                    </div>
+                                    <div class="group-members">
+                                        <h4>Recent Members</h4>
+                                        <div class="member-avatars">
+                                            <div class="member-avatar" title="Sarah M.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="Alex C.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="Emily R.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="Marcus T.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="more-members">+4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-actions">
+                                    <button class="btn btn-primary" onclick="joinGroup('study-squad')">
+                                        <i class="fas fa-user-plus"></i>
+                                        Join Group
+                                    </button>
+                                    <button class="btn btn-outline" onclick="previewGroup('study-squad')">
+                                        <i class="fas fa-eye"></i>
+                                        Preview
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="group-card active" data-group="emotional-buddies">
+                                <div class="group-header">
+                                    <div class="group-info">
+                                        <h3>Emotional Balance Buddies</h3>
+                                        <p class="group-focus">Sleep & Mental Health</p>
+                                        <div class="group-schedule">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Mondays & Wednesdays, 6:30 PM EST</span>
+                                        </div>
+                                    </div>
+                                    <div class="group-status active">
+                                        <i class="fas fa-circle"></i>
+                                        Active
+                                    </div>
+                                </div>
+                                <div class="group-content">
+                                    <div class="group-description">
+                                        <p>Supportive environment to discuss how sleep affects mood, stress, and anxiety. We share coping strategies and check in on each other's sleep habits. Very judgment-free zone!</p>
+                                    </div>
+                                    <div class="group-stats">
+                                        <span><i class="fas fa-users"></i> 6/8 members</span>
+                                        <span><i class="fas fa-clock"></i> 5 weeks active</span>
+                                        <span><i class="fas fa-star"></i> 4.9 rating</span>
+                                        <span><i class="fas fa-heart"></i> Support-focused</span>
+                                    </div>
+                                    <div class="group-members">
+                                        <h4>Recent Members</h4>
+                                        <div class="member-avatars">
+                                            <div class="member-avatar" title="Jordan K.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="Lisa C.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="David R.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="more-members">+3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-actions">
+                                    <button class="btn btn-primary" onclick="joinGroup('emotional-buddies')">
+                                        <i class="fas fa-user-plus"></i>
+                                        Join Group
+                                    </button>
+                                    <button class="btn btn-outline" onclick="previewGroup('emotional-buddies')">
+                                        <i class="fas fa-eye"></i>
+                                        Preview
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="group-card recruiting" data-group="academic-masters">
+                                <div class="group-header">
+                                    <div class="group-info">
+                                        <h3>Academic Performance Masters</h3>
+                                        <p class="group-focus">Sleep Optimization for Grades</p>
+                                        <div class="group-schedule">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Weekends, 2 PM EST</span>
+                                        </div>
+                                    </div>
+                                    <div class="group-status recruiting">
+                                        <i class="fas fa-circle"></i>
+                                        Recruiting
+                                    </div>
+                                </div>
+                                <div class="group-content">
+                                    <div class="group-description">
+                                        <p>For students serious about using sleep science to boost academic performance. We track our progress, share study strategies, and hold each other accountable for healthy sleep habits.</p>
+                                    </div>
+                                    <div class="group-stats">
+                                        <span><i class="fas fa-users"></i> 4/8 members</span>
+                                        <span><i class="fas fa-clock"></i> Just started</span>
+                                        <span><i class="fas fa-target"></i> Goal-oriented</span>
+                                        <span><i class="fas fa-chart-line"></i> Progress tracking</span>
+                                    </div>
+                                    <div class="group-members">
+                                        <h4>Founding Members</h4>
+                                        <div class="member-avatars">
+                                            <div class="member-avatar" title="Taylor J.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="member-avatar" title="Maria S.">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="more-members">+2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-actions">
+                                    <button class="btn btn-primary" onclick="joinGroup('academic-masters')">
+                                        <i class="fas fa-user-plus"></i>
+                                        Be a Founding Member
+                                    </button>
+                                    <button class="btn btn-outline" onclick="previewGroup('academic-masters')">
+                                        <i class="fas fa-eye"></i>
+                                        Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Sidebar - Community Stats -->
+                <aside class="community-stats">
+                    <div class="stats-card">
+                        <h3>Community Impact</h3>
+                        <div class="impact-metrics">
+                            <div class="impact-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">+0.8</span>
+                                    <span class="metric-label">Avg GPA Increase</span>
+                                </div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">+1.5hrs</span>
+                                    <span class="metric-label">More Sleep/Night</span>
+                                </div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-smile"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">73%</span>
+                                    <span class="metric-label">Improved Mood</span>
+                                </div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">95%</span>
+                                    <span class="metric-label">Would Recommend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>Today's Activity</h3>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <i class="fas fa-comment activity-icon discussion"></i>
+                                <div class="activity-content">
+                                    <p><strong>Sarah M.</strong> started a discussion about study stress</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-star activity-icon success"></i>
+                                <div class="activity-content">
+                                    <p><strong>Marcus T.</strong> shared a success story</p>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-users activity-icon group"></i>
+                                <div class="activity-content">
+                                    <p><strong>Emily R.</strong> joined Sleep Science Study Squad</p>
+                                    <span class="activity-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-chalkboard-teacher activity-icon tutor"></i>
+                                <div class="activity-content">
+                                    <p><strong>Jordan K.</strong> completed a tutoring session</p>
+                                    <span class="activity-time">6 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>Community Challenges</h3>
+                        <div class="challenges">
+                            <div class="challenge-item active">
+                                <div class="challenge-header">
+                                    <h4>7-Day Sleep Consistency</h4>
+                                    <span class="challenge-badge">Active</span>
+                                </div>
+                                <p>Maintain the same bedtime for 7 consecutive nights</p>
+                                <div class="challenge-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 57%"></div>
+                                    </div>
+                                    <span class="progress-text">4/7 days</span>
+                                </div>
+                                <div class="challenge-participants">
+                                    <i class="fas fa-users"></i>
+                                    <span>156 participants</span>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item upcoming">
+                                <div class="challenge-header">
+                                    <h4>No Screens Before Bed</h4>
+                                    <span class="challenge-badge">Starting Soon</span>
+                                </div>
+                                <p>Avoid all screens 1 hour before bedtime</p>
+                                <div class="challenge-participants">
+                                    <i class="fas fa-users"></i>
+                                    <span>89 signed up</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon"></i>
+                        <span>Mindful Sleep</span>
+                    </div>
+                    <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindful Sleep. All rights reserved. Designed for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- New Discussion Modal -->
+    <div id="discussionModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start New Discussion</h2>
+                <button class="modal-close" onclick="closeDiscussionModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="discussion-form" onsubmit="submitDiscussion(event)">
+                    <div class="form-group">
+                        <label for="discussionTitle">Discussion Title</label>
+                        <input type="text" id="discussionTitle" placeholder="What would you like to discuss?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="discussionCategory">Category</label>
+                        <select id="discussionCategory" required>
+                            <option value="">Select a category</option>
+                            <option value="sleep-tips">Sleep Tips</option>
+                            <option value="brain-development">Brain Development</option>
+                            <option value="emotional-balance">Emotional Balance</option>
+                            <option value="academic-performance">Academic Performance</option>
+                            <option value="sleep-environment">Sleep Environment</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="discussionContent">Your Question or Topic</label>
+                        <textarea id="discussionContent" rows="6" placeholder="Share your thoughts, ask a question, or start a conversation..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Post Discussion
+                        </button>
+                        <button type="button" class="btn btn-outline" onclick="closeDiscussionModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+</html>
