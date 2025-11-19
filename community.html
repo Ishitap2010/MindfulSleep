@@ -50,49 +50,10 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="header-content">
-                    <h1 class="page-title">Student Sleep Science Community</h1>
+                    <h1 class="page-title">Mindful Sleep Community</h1>
                     <p class="page-subtitle">Connect with fellow students, share experiences, learn from peers, and support each other's journey to better sleep and academic success</p>
                 </div>
-                <div class="header-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Active Members</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">120</span>
-                        <span class="stat-label">Discussions</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">45</span>
-                        <span class="stat-label">Study Groups</span>
-                    </div>
-                </div>
             </div>
-
-            <!-- Community Navigation -->
-            <div class="community-nav">
-                <button class="community-filter active" data-filter="all">
-                    <i class="fas fa-th"></i>
-                    All Activity
-                </button>
-                <button class="community-filter" data-filter="discussions">
-                    <i class="fas fa-comments"></i>
-                    Discussions
-                </button>
-                <button class="community-filter" data-filter="tutoring">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    Peer Tutoring
-                </button>
-                <button class="community-filter" data-filter="success-stories">
-                    <i class="fas fa-trophy"></i>
-                    Success Stories
-                </button>
-                <button class="community-filter" data-filter="study-groups">
-                    <i class="fas fa-users"></i>
-                    Study Groups
-                </button>
-            </div>
-
             <!-- Main Community Content -->
             <div class="community-grid">
                 
@@ -225,7 +186,9 @@
                                 </div>
                                 <div class="discussion-content">
                                     <h3>How do you deal with late-night study stress?</h3>
-                                    <p>I've been studying for finals and find myself staying up way too late because I'm anxious about not knowing enough. This is messing up my sleep schedule completely. Has anyone found good strategies for managing study anxiety while maintaining healthy sleep habits?</p>
+                                    <p>I've been cramming for finals all week, and every night I end up staying up way later than I mean to. It's not even the studying, it's the stress of feeling like I'm not prepared enough. Then I can't fall asleep because my brain is still in "school mode.
+
+If anyone has tricks for calimg down before bed or balancing studying without ruining your sleep schedule...please share. I'm struggling!"</p>
                                     <div class="discussion-engagement">
                                         <button class="engagement-btn" onclick="likePost('discussion-1')">
                                             <i class="fas fa-heart"></i>
@@ -247,7 +210,7 @@
                                             <i class="fas fa-user"></i>
                                             <span>Marcus T.</span>
                                         </div>
-                                        <p>"I use the 20-20-20 rule: study for 20 min, take 20 sec break, look at something 20 ft away. Helps reduce anxiety!"</p>
+                                        <p>"I follow the 20-20-20 rhythm: 20 minutes of focused studying, then a tiny break where I look at something far away or stretch. It keeps my stress from snowballing."</p>
                                     </div>
                                 </div>
                             </div>
@@ -270,8 +233,10 @@
                                     </div>
                                 </div>
                                 <div class="discussion-content">
-                                    <h3>Amazing fact about REM sleep and memory!</h3>
-                                    <p>Just learned in our brain development module that during REM sleep, our brains replay the day's learning up to 20 times faster than when we were awake! No wonder I remember things better after a good night's sleep. Anyone else notice this?</p>
+                                    <h3>Crazy REM sleep fact I just learned</h3>
+                                    <p>So in the brain development module, it said that during REM sleep our brains replay what we learned during the day way faster than when we're awake. I didn't realize how literal "sleeping on it" actually is.
+
+Honestly explains why sometimes I study something, sleep, and magically remember it better the next day. Anyone else get this too?</p>
                                     <div class="discussion-engagement">
                                         <button class="engagement-btn" onclick="likePost('discussion-2')">
                                             <i class="fas fa-heart"></i>
@@ -288,209 +253,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="discussion-card">
-                                <div class="discussion-header">
-                                    <div class="discussion-meta">
-                                        <div class="author-info">
-                                            <div class="author-avatar">
-                                                <i class="fas fa-user"></i>
-                                            </div>
-                                            <div class="author-details">
-                                                <h4>Emily R.</h4>
-                                                <span class="post-time">1 day ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="discussion-tags">
-                                            <span class="tag category">Sleep Environment</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="discussion-content">
-                                    <h3>Room setup for better sleep - what works?</h3>
-                                    <p>I'm trying to optimize my bedroom for better sleep. Currently using blackout curtains and a white noise app. What other changes have you made that actually helped improve your sleep quality?</p>
-                                    <div class="discussion-engagement">
-                                        <button class="engagement-btn" onclick="likePost('discussion-3')">
-                                            <i class="fas fa-heart"></i>
-                                            <span>15</span>
-                                        </button>
-                                        <button class="engagement-btn" onclick="replyToPost('discussion-3')">
-                                            <i class="fas fa-reply"></i>
-                                            <span>22 replies</span>
-                                        </button>
-                                        <button class="engagement-btn" onclick="sharePost('discussion-3')">
-                                            <i class="fas fa-share"></i>
-                                            <span>Share</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </section>
-
-                    <!-- Peer Tutoring Section -->
-                    <section class="community-section tutoring" data-category="tutoring">
-                        <div class="section-header">
-                            <h2 class="section-title">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                Peer Tutoring
-                            </h2>
-                            <button class="btn btn-secondary btn-sm" onclick="offerTutoring()">
-                                <i class="fas fa-plus"></i>
-                                Offer Help
-                            </button>
-                        </div>
-
-                        <div class="tutoring-grid">
-                            <div class="tutor-card available">
-                                <div class="tutor-header">
-                                    <div class="tutor-avatar">
-                                        <i class="fas fa-user-graduate"></i>
-                                    </div>
-                                    <div class="tutor-info">
-                                        <h3>Maria Santos</h3>
-                                        <p class="tutor-expertise">Brain Development Specialist</p>
-                                        <div class="tutor-rating">
-                                            <div class="stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <span class="rating-score">5.0 (23 reviews)</span>
-                                        </div>
-                                    </div>
-                                    <div class="tutor-status available">
-                                        <i class="fas fa-circle"></i>
-                                        Available Now
-                                    </div>
-                                </div>
-                                <div class="tutor-content">
-                                    <div class="expertise-tags">
-                                        <span class="expertise-tag">Neuroplasticity</span>
-                                        <span class="expertise-tag">Memory Formation</span>
-                                        <span class="expertise-tag">REM Sleep</span>
-                                    </div>
-                                    <p class="tutor-bio">Hi! I'm passionate about how sleep affects teenage brain development. Completed all modules with distinction and love helping others understand these concepts!</p>
-                                    <div class="tutor-stats">
-                                        <span><i class="fas fa-clock"></i> 45 hours tutored</span>
-                                        <span><i class="fas fa-users"></i> 18 students helped</span>
-                                        <span><i class="fas fa-award"></i> 95% success rate</span>
-                                    </div>
-                                </div>
-                                <div class="tutor-actions">
-                                    <button class="btn btn-primary" onclick="requestTutoring('maria', 'brain-development')">
-                                        <i class="fas fa-calendar"></i>
-                                        Book Session
-                                    </button>
-                                    <button class="btn btn-outline" onclick="messageTutor('maria')">
-                                        <i class="fas fa-message"></i>
-                                        Message
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="tutor-card busy">
-                                <div class="tutor-header">
-                                    <div class="tutor-avatar">
-                                        <i class="fas fa-user-graduate"></i>
-                                    </div>
-                                    <div class="tutor-info">
-                                        <h3>Jordan Kim</h3>
-                                        <p class="tutor-expertise">Emotional Balance Coach</p>
-                                        <div class="tutor-rating">
-                                            <div class="stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                            <span class="rating-score">4.8 (31 reviews)</span>
-                                        </div>
-                                    </div>
-                                    <div class="tutor-status busy">
-                                        <i class="fas fa-circle"></i>
-                                        In Session
-                                    </div>
-                                </div>
-                                <div class="tutor-content">
-                                    <div class="expertise-tags">
-                                        <span class="expertise-tag">Mood Regulation</span>
-                                        <span class="expertise-tag">Stress Management</span>
-                                        <span class="expertise-tag">Anxiety</span>
-                                    </div>
-                                    <p class="tutor-bio">Experienced in helping students understand the connection between sleep and emotional health. I struggled with this myself and found strategies that really work!</p>
-                                    <div class="tutor-stats">
-                                        <span><i class="fas fa-clock"></i> 62 hours tutored</span>
-                                        <span><i class="fas fa-users"></i> 25 students helped</span>
-                                        <span><i class="fas fa-award"></i> 92% success rate</span>
-                                    </div>
-                                </div>
-                                <div class="tutor-actions">
-                                    <button class="btn btn-disabled" disabled>
-                                        <i class="fas fa-clock"></i>
-                                        Currently Busy
-                                    </button>
-                                    <button class="btn btn-outline" onclick="messageTutor('jordan')">
-                                        <i class="fas fa-message"></i>
-                                        Message
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="tutor-card available">
-                                <div class="tutor-header">
-                                    <div class="tutor-avatar">
-                                        <i class="fas fa-user-graduate"></i>
-                                    </div>
-                                    <div class="tutor-info">
-                                        <h3>Taylor Johnson</h3>
-                                        <p class="tutor-expertise">Academic Performance Guide</p>
-                                        <div class="tutor-rating">
-                                            <div class="stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                            <span class="rating-score">4.7 (15 reviews)</span>
-                                        </div>
-                                    </div>
-                                    <div class="tutor-status available">
-                                        <i class="fas fa-circle"></i>
-                                        Available Now
-                                    </div>
-                                </div>
-                                <div class="tutor-content">
-                                    <div class="expertise-tags">
-                                        <span class="expertise-tag">Study Strategies</span>
-                                        <span class="expertise-tag">Memory Consolidation</span>
-                                        <span class="expertise-tag">Focus</span>
-                                    </div>
-                                    <p class="tutor-bio">I improved my GPA from 2.8 to 3.9 just by optimizing my sleep schedule! Happy to share what I learned about sleep and academic performance.</p>
-                                    <div class="tutor-stats">
-                                        <span><i class="fas fa-clock"></i> 28 hours tutored</span>
-                                        <span><i class="fas fa-users"></i> 12 students helped</span>
-                                        <span><i class="fas fa-award"></i> 98% success rate</span>
-                                    </div>
-                                </div>
-                                <div class="tutor-actions">
-                                    <button class="btn btn-primary" onclick="requestTutoring('taylor', 'academic-performance')">
-                                        <i class="fas fa-calendar"></i>
-                                        Book Session
-                                    </button>
-                                    <button class="btn btn-outline" onclick="messageTutor('taylor')">
-                                        <i class="fas fa-message"></i>
-                                        Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
                     <!-- Success Stories Section -->
                     <section class="community-section success-stories" data-category="success-stories">
                         <div class="section-header">
@@ -839,51 +603,6 @@
                         </div>
                     </section>
                 </div>
-
-                <!-- Right Sidebar - Community Stats -->
-                <aside class="community-stats">
-                    <div class="stats-card">
-                        <h3>Community Impact</h3>
-                        <div class="impact-metrics">
-                            <div class="impact-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="metric-content">
-                                    <span class="metric-value">+0.8</span>
-                                    <span class="metric-label">Avg GPA Increase</span>
-                                </div>
-                            </div>
-                            <div class="impact-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-bed"></i>
-                                </div>
-                                <div class="metric-content">
-                                    <span class="metric-value">+1.5hrs</span>
-                                    <span class="metric-label">More Sleep/Night</span>
-                                </div>
-                            </div>
-                            <div class="impact-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-smile"></i>
-                                </div>
-                                <div class="metric-content">
-                                    <span class="metric-value">73%</span>
-                                    <span class="metric-label">Improved Mood</span>
-                                </div>
-                            </div>
-                            <div class="impact-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="metric-content">
-                                    <span class="metric-value">95%</span>
-                                    <span class="metric-label">Would Recommend</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="stats-card">
                         <h3>Today's Activity</h3>
                         <div class="activity-feed">
