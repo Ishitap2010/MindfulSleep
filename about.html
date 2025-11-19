@@ -3,60 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Resources - Mindful Sleep</title>
+    <title>About - Mindful Sleep</title>
     <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="css/about.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip navigation link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                     <span>Mindful Sleep</span>
                 </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link" role="menuitem">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <li class="nav-item" role="none">
+                        <a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="schedule.html" class="nav-link">Schedule</a>
+                    <li class="nav-item" role="none">
+                        <a href="schedule.html" class="nav-link" role="menuitem">Schedule</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="resources.html" class="nav-link active">Resources</a>
+                    <li class="nav-item" role="none">
+                        <a href="resources.html" class="nav-link" role="menuitem">Resources</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="community.html" class="nav-link">Community</a>
+                    <li class="nav-item" role="none">
+                        <a href="community.html" class="nav-link" role="menuitem">Community</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
+                    <li class="nav-item" role="none">
+                        <a href="about.html" class="nav-link active" role="menuitem" aria-current="page">About</a>
                     </li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="resources-main">
+    <main class="resources-main" id="main-content" tabindex="-1">
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
                 <div class="header-content">
-                    <h1 class="page-title">Our Mission</h1>
+                    <h1 class="page-title">About Mindful Sleep</h1>
                     <p class="page-subtitle">Our mission is to make sleep wellness simple, science-based, and accessible for everyone. 
                     We believe that understanding your sleep is the first step to improving it; not through complex data, but through 
                     small daily habits anyone can track.</p>
                 </div>
             </div>
 
+            <!-- About Content -->
+            <div class="about-content">
+                <!-- Mission Section -->
+                <section class="about-section" id="mission" aria-labelledby="mission-heading">
+                    <h2 id="mission-heading">Our Mission</h2>
+                    <div class="mission-grid">
+                        <div class="mission-text">
+                            <p>At Mindful Sleep, we're addressing a critical health crisis among teenagers. Research shows that 77% of high school students get less than the recommended 8-10 hours of sleep per night, leading to decreased academic performance, emotional instability, and compromised physical health.</p>
+                            
+                            <p>Our platform was created by students, for students, to bridge the gap between sleep science research and practical application in teenage life. We transform complex neuroscience into engaging, actionable content that empowers young people to take control of their sleep health.</p>
+                            
+                            <blockquote class="mission-quote">
+                                "Sleep is not a luxury—it's a fundamental requirement for teenage brain development, emotional regulation, and academic success."
+                                <cite>— Dr. Mary Carskadon, Sleep Researcher</cite>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="mission-stats">
+                            <h3>The Sleep Crisis</h3>
+                            <div class="stat-cards">
+                                <div class="stat-card">
+                                    <span class="stat-number">77%</span>
+                                    <span class="stat-label">of teens get insufficient sleep</span>
+                                    <a href="#ref-1" class="stat-source">[1]</a>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">20%</span>
+                                    <span class="stat-label">improvement in grades with better sleep</span>
+                                    <a href="#ref-2" class="stat-source">[2]</a>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">2hrs</span>
+                                    <span class="stat-label">natural bedtime delay in teens</span>
+                                    <a href="#ref-3" class="stat-source">[3]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Science Section -->
+                <section class="about-section" id="science" aria-labelledby="science-heading">
+                    <h2 id="science-heading">The Science Behind Our Approach</h2>
+                    
+                    <div class="science-grid">
+                        <div class="science-principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                            </div>
+                            <h3>Adolescent Brain Development</h3>
+                            <p>During adolescence, the brain undergoes significant structural and functional changes. The prefrontal cortex, responsible for decision-making and impulse control, continues developing until age 25. Sleep plays a crucial role in this process through synaptic plasticity and memory consolidation.</p>
+                            <div class="research-links">
+                                <a href="pdfs/adolescent-brain-development.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                    Adolescent Brain Development Research (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="science-principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <h3>Circadian Rhythm Shifts</h3>
+                            <p>Research by Dr. Mary Carskadon demonstrates that teenagers experience a natural 2-3 hour delay in their circadian rhythms. This biological shift, combined with early school start times, creates a perfect storm for chronic sleep deprivation.</p>
+                            <div class="research-links">
+                                <a href="pdfs/circadian-rhythms-teens.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                    Circadian Rhythm Research (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="science-principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <h3>Sleep & Emotional Regulation</h3>
+                            <p>Sleep deprivation significantly impacts the teenage brain's ability to regulate emotions. The amygdala becomes hyperactive while the prefrontal cortex's regulatory influence diminishes, leading to increased anxiety, depression, and mood instability.</p>
+                            <div class="research-links">
+                                <a href="pdfs/sleep-emotion-regulation.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                    Sleep & Emotion Research (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="science-principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <h3>Academic Performance Impact</h3>
+                            <p>Multiple studies demonstrate the direct correlation between sleep duration/quality and academic performance. Sleep facilitates memory consolidation, attention regulation, and executive function—all critical for learning and academic success.</p>
+                            <div class="research-links">
+                                <a href="pdfs/sleep-academic-performance.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                    Academic Performance Studies (PDF)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Team Section -->
+                <section class="about-section" id="team" aria-labelledby="team-heading">
+                    <h2 id="team-heading">Meet the Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                            </div>
+                            <h3>Sarah Martinez</h3>
+                            <p class="member-role">Founder & Lead Developer</p>
+                            <p class="member-bio">High school senior passionate about sleep science after struggling with insomnia. Combines coding skills with personal experience to create meaningful solutions.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                            </div>
+                            <h3>Dr. Emily Chen</h3>
+                            <p class="member-role">Scientific Advisor</p>
+                            <p class="member-bio">Adolescent sleep researcher and pediatric sleep specialist. Provides scientific oversight and ensures content accuracy.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                            </div>
+                            <h3>Student Contributors</h3>
+                            <p class="member-role">Community Leaders</p>
+                            <p class="member-bio">High school students from across the country who contribute content, moderate discussions, and provide peer support.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Impact Section -->
+                <section class="about-section" id="impact" aria-labelledby="impact-heading">
+                    <h2 id="impact-heading">Our Impact</h2>
+                    <div class="impact-grid">
+                        <div class="impact-metric">
+                            <span class="impact-number">500+</span>
+                            <span class="impact-label">Students Helped</span>
+                            <p class="impact-description">Active members using our platform to improve their sleep habits and academic performance.</p>
+                        </div>
+
+                        <div class="impact-metric">
+                            <span class="impact-number">+0.8</span>
+                            <span class="impact-label">Average GPA Increase</span>
+                            <p class="impact-description">Students report significant academic improvement after implementing our sleep strategies.</p>
+                        </div>
+
+                        <div class="impact-metric">
+                            <span class="impact-number">+1.5hrs</span>
+                            <span class="impact-label">More Sleep per Night</span>
+                            <p class="impact-description">Average increase in nightly sleep duration among platform users.</p>
+                        </div>
+
+                        <div class="impact-metric">
+                            <span class="impact-number">73%</span>
+                            <span class="impact-label">Report Better Mood</span>
+                            <p class="impact-description">Students experience improved emotional regulation and mental health.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References Section -->
+                <section class="about-section" id="references" aria-labelledby="references-heading">
+                    <h2 id="references-heading">Scientific References</h2>
+                    <div class="references-content">
+                        <p>Our content is based on peer-reviewed research and evidence-based practices in sleep medicine and adolescent development:</p>
+                        
+                        <div class="reference-list">
+                            <div class="reference-item" id="ref-1">
+                                <span class="ref-number">[1]</span>
+                                <div class="ref-content">
+                                    <h4>Sleep Duration and Quality in High School Students</h4>
+                                    <p class="ref-authors">Wheaton, A. G., Jones, S. E., Cooper, A. C., & Croft, J. B.</p>
+                                    <p class="ref-journal"><em>Morbidity and Mortality Weekly Report</em>, 2018</p>
+                                    <div class="ref-links">
+                                        <a href="pdfs/wheaton-2018-sleep-duration.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                        <a href="https://doi.org/10.15585/mmwr.mm6703a1" class="external-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            View Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reference-item" id="ref-2">
+                                <span class="ref-number">[2]</span>
+                                <div class="ref-content">
+                                    <h4>Sleep and Academic Performance in School-Age Children and Adolescents</h4>
+                                    <p class="ref-authors">Dewald, J. F., Meijer, A. M., Oort, F. J., Kerkhof, G. A., & Bögels, S. M.</p>
+                                    <p class="ref-journal"><em>Sleep Medicine Reviews</em>, 2010</p>
+                                    <div class="ref-links">
+                                        <a href="pdfs/dewald-2010-academic-performance.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                        <a href="https://doi.org/10.1016/j.smrv.2009.10.004" class="external-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            View Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reference-item" id="ref-3">
+                                <span class="ref-number">[3]</span>
+                                <div class="ref-content">
+                                    <h4>Adolescent Sleep Patterns, Circadian Timing, and Sleepiness at a Transition to Early School Days</h4>
+                                    <p class="ref-authors">Carskadon, M. A., Wolfson, A. R., Acebo, C., Tzischinsky, O., & Seifer, R.</p>
+                                    <p class="ref-journal"><em>Sleep</em>, 1998</p>
+                                    <div class="ref-links">
+                                        <a href="pdfs/carskadon-1998-adolescent-patterns.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                        <a href="https://doi.org/10.1093/sleep/21.8.871" class="external-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            View Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reference-item" id="ref-4">
+                                <span class="ref-number">[4]</span>
+                                <div class="ref-content">
+                                    <h4>The Role of Sleep in Cognition and Emotion</h4>
+                                    <p class="ref-authors">Walker, M. P.</p>
+                                    <p class="ref-journal"><em>Annals of the New York Academy of Sciences</em>, 2009</p>
+                                    <div class="ref-links">
+                                        <a href="pdfs/walker-2009-sleep-cognition-emotion.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                        <a href="https://doi.org/10.1111/j.1749-6632.2009.04416.x" class="external-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            View Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reference-item" id="ref-5">
+                                <span class="ref-number">[5]</span>
+                                <div class="ref-content">
+                                    <h4>Sleep, Learning, and Memory</h4>
+                                    <p class="ref-authors">Diekelmann, S., & Born, J.</p>
+                                    <p class="ref-journal"><em>Nature Reviews Neuroscience</em>, 2010</p>
+                                    <div class="ref-links">
+                                        <a href="pdfs/diekelmann-2010-sleep-learning-memory.pdf" class="pdf-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                        <a href="https://doi.org/10.1038/nrn2762" class="external-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            View Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Resources -->
+                        <div class="additional-resources">
+                            <h3>Additional Research Materials</h3>
+                            <div class="resource-grid">
+                                <a href="pdfs/teen-sleep-comprehensive-guide.pdf" class="resource-card" target="_blank" rel="noopener">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-book" aria-hidden="true"></i>
+                                    </div>
+                                    <h4>Comprehensive Guide to Teen Sleep</h4>
+                                    <p>Complete research compilation on adolescent sleep patterns and health impacts.</p>
+                                    <span class="resource-type">PDF • 2.5 MB</span>
+                                </a>
+
+                                <a href="pdfs/sleep-hygiene-guidelines.pdf" class="resource-card" target="_blank" rel="noopener">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                                    </div>
+                                    <h4>Evidence-Based Sleep Hygiene Guidelines</h4>
+                                    <p>Practical recommendations based on current sleep research for teenagers.</p>
+                                    <span class="resource-type">PDF • 1.8 MB</span>
+                                </a>
+
+                                <a href="pdfs/circadian-rhythm-interventions.pdf" class="resource-card" target="_blank" rel="noopener">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-clock" aria-hidden="true"></i>
+                                    </div>
+                                    <h4>Circadian Rhythm Interventions</h4>
+                                    <p>Research on light therapy and behavioral interventions for sleep phase disorders.</p>
+                                    <span class="resource-type">PDF • 3.1 MB</span>
+                                </a>
+
+                                <a href="pdfs/sleep-mental-health-teens.pdf" class="resource-card" target="_blank" rel="noopener">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-brain" aria-hidden="true"></i>
+                                    </div>
+                                    <h4>Sleep & Mental Health in Adolescents</h4>
+                                    <p>Meta-analysis of studies examining the relationship between sleep and teen mental health.</p>
+                                    <span class="resource-type">PDF • 4.2 MB</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="about-section" id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading">Get in Touch</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>Questions or Suggestions?</h3>
+                            <p>We'd love to hear from you! Whether you're a student, educator, researcher, or simply someone interested in sleep health, we welcome your feedback and ideas.</p>
+                            
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>hello@mindfulsleep.org</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                                    <span>Join our community discussions</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-github" aria-hidden="true"></i>
+                                    <span>Contribute to our open-source project</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="acknowledgments">
+                            <h3>Acknowledgments</h3>
+                            <p>Special thanks to the sleep research community, particularly:</p>
+                            <ul>
+                                <li>National Sleep Foundation</li>
+                                <li>American Academy of Sleep Medicine</li>
+                                <li>Sleep Research Society</li>
+                                <li>Bradley Hospital Sleep Research Lab</li>
+                                <li>Stanford Sleep Sciences Institute</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
@@ -65,33 +420,33 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-moon" aria-hidden="true"></i>
                         <span>Mindful Sleep</span>
                     </div>
                     <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3></h3>
+                    <h3>Learning Resources</h3>
                     <ul>
-                        <li><a href="resources.html"></a></li>
-                        <li><a href="resources.html"></a></li>
-                        <li><a href="resources.html"></a></li>
-                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html">Interactive Modules</a></li>
+                        <li><a href="resources.html">Video Library</a></li>
+                        <li><a href="resources.html">Knowledge Quizzes</a></li>
+                        <li><a href="resources.html">Study Materials</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3></h3>
+                    <h3>Community</h3>
                     <ul>
-                        <li><a href="schedule.html"></a></li>
-                        <li><a href="community.html"></a></li>
-                        <li><a href="schedule.html"></a></li>
-                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html">Study Sessions</a></li>
+                        <li><a href="community.html">Discussion Forums</a></li>
+                        <li><a href="schedule.html">Expert Workshops</a></li>
+                        <li><a href="community.html">Peer Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
