@@ -917,10 +917,11 @@ p {
 }
 
 /* Fix footer-bottom paragraph color specifically */
-.footer-bottom p {
-    color: var(--white) !important;
-    margin-bottom: 0;
-}
+    .footer-bottom p {
+        /*color: var(--white) !important;*/
+        color: var(--gray-300) !important;
+        margin-bottom: 0;
+    }
 
 .footer-bottom1 {
     border-top: 1px solid var(--medium-blue);
