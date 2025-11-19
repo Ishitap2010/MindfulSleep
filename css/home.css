@@ -28,6 +28,8 @@
     --medium-blue: #34495E;
     --light-blue: #ECF0F1;
     --white: #FFFFFF;
+    --black: #000000; /* Added missing black variable */
+    --gray-50: #FAFAFA;
     --gray-100: #F8F9FA;
     --gray-200: #E9ECEF;
     --gray-300: #DEE2E6;
@@ -115,6 +117,24 @@ p {
     color: var(--gray-700);
 }
 
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
 /* Header and Navigation */
 .header {
     background: var(--white);
@@ -192,6 +212,8 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
+    background: none;
+    border: none;
 }
 
 .bar {
@@ -754,7 +776,7 @@ p {
 .cta {
     padding: var(--spacing-4xl) 0;
     background: linear-gradient(135deg, var(--moon-glow) 0%, var(--light-blue) 100%);
-    color: var(--black);
+    color: var(--dark-blue); /* Fixed: use dark-blue instead of black */
     text-align: center;
 }
 
@@ -764,7 +786,7 @@ p {
 }
 
 .cta-text h2 {
-    color: var(--black);
+    color: var(--dark-blue); /* Fixed: use dark-blue instead of black */
     font-size: var(--font-size-4xl);
     margin-bottom: var(--spacing-md);
 }
@@ -772,7 +794,7 @@ p {
 .cta-text p {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-2xl);
-    opacity: 0.9;
+    color: var(--gray-700); /* Fixed: explicit color for better consistency */
     line-height: 1.7;
 }
 
@@ -796,13 +818,13 @@ p {
 }
 
 .cta .btn-outline {
-    border-color: var(--purple);
-    color: var(--white);
+    border-color: var(--primary-color); /* Fixed: use primary-color instead of undefined purple */
+    color: var(--primary-color); /* Fixed: use primary-color instead of white */
 }
 
 .cta .btn-outline:hover {
-    background: var(--white);
-    color: var(--primary-color);
+    background: var(--primary-color); /* Fixed: use primary-color */
+    color: var(--white);
 }
 
 /* Footer */
@@ -831,6 +853,7 @@ p {
     font-size: var(--font-size-xl);
     font-weight: 700;
     margin-bottom: var(--spacing-md);
+    color: var(--white); /* Ensure logo text is white */
 }
 
 .footer-logo i {
@@ -891,6 +914,12 @@ p {
     padding-top: var(--spacing-xl);
     text-align: center;
     color: var(--gray-300);
+}
+
+/* Fix footer-bottom paragraph color specifically */
+.footer-bottom p {
+    color: var(--white) !important;
+    margin-bottom: 0;
 }
 
 .footer-bottom1 {
