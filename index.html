@@ -9,68 +9,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip navigation link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                     <span>Mindful Sleep</span>
                 </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <li class="nav-item" role="none">
+                        <a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="schedule.html" class="nav-link">Schedule</a>
+                    <li class="nav-item" role="none">
+                        <a href="schedule.html" class="nav-link" role="menuitem">Schedule</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="resources.html" class="nav-link">Resources</a>
+                    <li class="nav-item" role="none">
+                        <a href="resources.html" class="nav-link" role="menuitem">Resources</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="community.html" class="nav-link">Community</a>
+                    <li class="nav-item" role="none">
+                        <a href="community.html" class="nav-link" role="menuitem">Community</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
+                    <li class="nav-item" role="none">
+                        <a href="about.html" class="nav-link" role="menuitem">About</a>
                     </li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-background"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" id="hero-title">
                         Sleep and the 
                         <span class="highlight">Teenage Brain</span>
                     </h1>
                     <p class="hero-subtitle">
                         Explore how the brain impacts memory,
-                        mood, and mental health in adolesences.
+                        mood, and mental health in adolescences.
                     </p>
                     <div class="hero-buttons">
                         <a href="resources.html" class="btn btn-primary">
-                            <i class="fas fa-play"></i>
+                            <i class="fas fa-play" aria-hidden="true"></i>
                             Start Learning
                         </a>
                         <a href="dashboard.html" class="btn btn-secondary">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                             Track Progress
                         </a>
                     </div>
                 </div>
-                <div class="hero-visual">
+                <div class="hero-visual" aria-hidden="true">
                     <div class="sleep-animation">
                         <div class="moon">
                             <i class="fas fa-moon"></i>
@@ -89,58 +92,59 @@
         </section>
 
         <!-- Features Section -->
-        <section class="features">
+        <section class="features" aria-labelledby="features-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Why Sleep Matters</h2>
+                    <h2 class="section-title" id="features-title">Why Sleep Matters</h2>
                     <p class="section-subtitle">Understand the importance of sleep in teenage development</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card">
+                <div class="features-grid" role="list">
+                    <div class="feature-card" role="listitem">
                         <div class="feature-icon brain">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-brain" aria-hidden="true"></i>
                         </div>
                         <p><b>Sleep fuels the teenage brain's growth and emotional balance.</b></p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" role="listitem">
                         <div class="feature-icon emotional">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart" aria-hidden="true"></i>
                         </div>
                         <p><b>During REM (Rapid Eye Movement), neurons strengthen memory and creativity.</b></p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" role="listitem">
                         <div class="feature-icon academic">
-                            <i class="fas fa-utensils"></i>
+                            <i class="fas fa-utensils" aria-hidden="true"></i>
                         </div>
                         <p><b>Sleep helps maintain a healthy weight by regulating appetite and energy levels.</b></p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Sleep Facts Section -->
-        <section class="sleep-facts">
+        <section class="sleep-facts" aria-labelledby="facts-title">
             <div class="container">
                 <div class="facts-header">
-                    <h2>Sleep Facts about Teenagers</h2>
+                    <h2 id="facts-title">Sleep Facts about Teenagers</h2>
                     <p>Research-backed insights about teen sleep patterns</p>
                 </div>
-                <div class="facts-grid">
-                    <div class="fact-card">
+                <div class="facts-grid" role="list">
+                    <div class="fact-card" role="listitem">
                         <div class="fact-number">77%</div>
                         <div class="fact-text">of high-schoolers report getting less than the recommended 8-10 hours of sleep</div>
                         <div class="fact-source">USAFacts</div>
                     </div>
-                    <div class="fact-card">
+                    <div class="fact-card" role="listitem">
                         <div class="fact-number1">8-10</div>
                         <div class="fact-text">hours of sleep recommended for teenagers aged 14-17</div>
                         <div class="fact-source">American Academy of Sleep Medicine</div>
                     </div>
-                    <div class="fact-card">
+                    <div class="fact-card" role="listitem">
                         <div class="fact-number">20%</div>
                         <div class="fact-text">improvement in academic performance with adequate sleep</div>
                         <div class="fact-source">National Institute of Health</div>
                     </div>
-                    <div class="fact-card">
+                    <div class="fact-card" role="listitem">
                         <div class="fact-number">2hrs</div>
                         <div class="fact-text">later natural bedtime shift during teenage years</div>
                         <div class="fact-source">Nationwide Children's Hospital</div>
@@ -150,50 +154,50 @@
         </section>
 
         <!-- How It Works Section -->
-        <section class="how-it-works">
+        <section class="how-it-works" aria-labelledby="how-it-works-title">
             <div class="container">
                 <div class="section-header">
-                    <h2>How Mindful Sleep Works</h2>
+                    <h2 id="how-it-works-title">How Mindful Sleep Works</h2>
                     <p>Your journey to better sleep and improved academic success</p>
                 </div>
-                <div class="steps-container">
-                    <div class="step">
-                        <div class="step-number">1</div>
+                <div class="steps-container" role="list">
+                    <div class="step" role="listitem">
+                        <div class="step-number" aria-hidden="true">1</div>
                         <div class="step-content">
                             <h3>Learn the Science</h3>
                             <p>Start with our interactive modules on sleep science, brain development, and teenage sleep patterns</p>
                         </div>
-                        <div class="step-icon">
+                        <div class="step-icon" aria-hidden="true">
                             <i class="fas fa-book-open"></i>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
+                    <div class="step" role="listitem">
+                        <div class="step-number" aria-hidden="true">2</div>
                         <div class="step-content">
                             <h3>Track Your Progress</h3>
                             <p>Use our dashboard to monitor your sleep patterns, learning achievements, and improvement goals</p>
                         </div>
-                        <div class="step-icon">
+                        <div class="step-icon" aria-hidden="true">
                             <i class="fas fa-chart-line"></i>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
+                    <div class="step" role="listitem">
+                        <div class="step-number" aria-hidden="true">3</div>
                         <div class="step-content">
                             <h3>Join Study Groups</h3>
                             <p>Participate in peer-led discussions, tutoring sessions, and collaborative learning activities</p>
                         </div>
-                        <div class="step-icon">
+                        <div class="step-icon" aria-hidden="true">
                             <i class="fas fa-users"></i>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
+                    <div class="step" role="listitem">
+                        <div class="step-number" aria-hidden="true">4</div>
                         <div class="step-content">
                             <h3>Apply & Improve</h3>
                             <p>Implement healthy sleep habits and see the positive impact on your academic performance</p>
                         </div>
-                        <div class="step-icon">
+                        <div class="step-icon" aria-hidden="true">
                             <i class="fas fa-trophy"></i>
                         </div>
                     </div>
@@ -202,55 +206,55 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
+        <section class="testimonials" aria-labelledby="testimonials-title">
             <div class="container">
                 <div class="section-header">
-                    <h2>What Other Students Are Saying</h2>
+                    <h2 id="testimonials-title">What Other Students Are Saying</h2>
                     <p>Real experiences from our learning community</p>
                 </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
+                <div class="testimonials-grid" role="list">
+                    <blockquote class="testimonial-card" role="listitem">
                         <div class="testimonial-content">
                             <p>"Learning about the science of sleep completely changed how I see school. Once I started implementing my knowledge of sleep into my everyday life, my focus and grades improved so much!"</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" aria-hidden="true"></i>
                             </div>
                             <div class="author-info">
                                 <h4>Sarah M.</h4>
-                                <p>Junior in High Schoolr</p>
+                                <p>Junior in High School</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                    </blockquote>
+                    <blockquote class="testimonial-card" role="listitem">
                         <div class="testimonial-content">
                             <p>"The peer study groups are the best part! We help each other understand the lessons and keep each other accountable for healthy sleep habits"</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" aria-hidden="true"></i>
                             </div>
                             <div class="author-info">
                                 <h4>Marcus T.</h4>
                                 <p>Senior in High School</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                    </blockquote>
+                    <blockquote class="testimonial-card" role="listitem">
                         <div class="testimonial-content">
                             <p>"I used to think sleep wasn't that important and scroll for hours during the night. Now I understand how it actually makes me smarter and happier!"</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" aria-hidden="true"></i>
                             </div>
                             <div class="author-info">
                                 <h4>Emily R.</h4>
                                 <p>Sophomore in High School</p>
                             </div>
                         </div>
-                    </div>
+                    </blockquote>
                 </div>
             </div>
         </section>
@@ -265,11 +269,11 @@
                     </div>
                     <div class="cta-actions">
                         <a href="dashboard.html" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i>
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
                             Get Started Today
                         </a>
                         <a href="resources.html" class="btn btn-primary">
-                            <i class="fas fa-play"></i>
+                            <i class="fas fa-play" aria-hidden="true"></i>
                             Explore Resources
                         </a>
                     </div>
@@ -283,15 +287,15 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-moon" aria-hidden="true"></i>
                         <span>Mindful Sleep</span>
                     </div>
                     <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -322,7 +326,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom1">
+            <div class="footer-bottom">
                 <p>&copy; 2025 Mindful Sleep. All rights reserved. Designed for student success.</p>
             </div>
         </div>
