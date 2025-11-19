@@ -1,0 +1,723 @@
+/* About Page Specific Styles */
+
+/* About Content Layout */
+.about-content {
+    max-width: 1400px; /* Match container width from resources.css */
+    margin: 0 auto;
+    /*padding: 0 var(--spacing-md);*/ /* Match container padding */
+}
+
+.about-section {
+    margin-bottom: var(--spacing-4xl);
+    padding: var(--spacing-2xl);
+    background: var(--white);
+    border-radius: var(--border-radius-2xl);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+}
+
+.about-section h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Override page-header for about page to ensure consistent width */
+.resources-main .page-header {
+    max-width: 1400px; /* Match container width */
+    margin: 0 auto var(--spacing-3xl) auto; /* Center and add bottom margin */
+    /* Remove container padding since this already has internal padding */
+}
+
+/* Mission Section */
+.mission-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: start;
+}
+
+.mission-text p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-lg);
+}
+
+.mission-quote {
+    background: linear-gradient(135deg, var(--moon-glow), #E8F4FD);
+    padding: var(--spacing-2xl);
+    border-radius: var(--border-radius-lg);
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    margin: var(--spacing-2xl) 0;
+}
+
+.mission-quote cite {
+    display: block;
+    text-align: right;
+    margin-top: var(--spacing-md);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.mission-stats h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.stat-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--gray-200);
+    text-align: center;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.stat-source {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: var(--accent-color);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.stat-source:hover {
+    background: var(--dream-purple);
+    transform: scale(1.05);
+}
+
+/* UNIFIED CARD WIDTH SYSTEM */
+/* All card grids now use consistent minimum width of 350px for uniform appearance */
+
+/* Science Section */
+.science-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.science-principle {
+    background: var(--gray-50);
+    padding: var(--spacing-2xl);
+    border-radius: var(--border-radius-xl);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition-normal);
+    height: fit-content;
+}
+
+.science-principle:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    background: var(--white);
+}
+
+.principle-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--calm-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+}
+
+.science-principle h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.science-principle p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.research-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.pdf-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--danger-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-fast);
+}
+
+.pdf-link:hover {
+    background: #C0392B;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.pdf-link i {
+    font-size: var(--font-size-base);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.team-member {
+    text-align: center;
+    background: var(--gray-50);
+    padding: var(--spacing-2xl);
+    border-radius: var(--border-radius-xl);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition-normal);
+    height: fit-content;
+}
+
+.team-member:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    background: var(--white);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-color), var(--dream-purple));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+}
+
+.team-member h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-bio {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* Impact Section */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.impact-metric {
+    text-align: center;
+    background: linear-gradient(135deg, var(--moon-glow), #F0F8FF);
+    padding: var(--spacing-2xl);
+    border-radius: var(--border-radius-xl);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition-normal);
+    height: fit-content;
+}
+
+.impact-metric:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--white), var(--moon-glow));
+}
+
+.impact-number {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+.impact-label {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.impact-description {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* References Section */
+.references-content {
+    max-width: 1400px; /* Match main content width */
+    margin: 0 auto;
+}
+
+.references-content > p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+}
+
+.reference-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-4xl);
+}
+
+.reference-item {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background: var(--gray-50);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition-normal);
+}
+
+.reference-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.ref-number {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    height: fit-content;
+    min-width: 40px;
+    text-align: center;
+}
+
+.ref-content {
+    flex: 1;
+}
+
+.ref-content h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ref-authors {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-sm);
+    font-style: italic;
+}
+
+.ref-journal {
+    color: var(--gray-700);
+    font-weight: 500;
+    margin-bottom: var(--spacing-lg);
+}
+
+.ref-links {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.external-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-fast);
+}
+
+.external-link:hover {
+    background: var(--success-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Additional Resources */
+.additional-resources {
+    margin-top: var(--spacing-4xl);
+    padding-top: var(--spacing-2xl);
+    border-top: 2px solid var(--gray-200);
+}
+
+.additional-resources h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.resource-card {
+    display: block;
+    padding: var(--spacing-xl);
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--border-radius-xl);
+    text-decoration: none;
+    transition: var(--transition-normal);
+    height: fit-content;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--downloads-color), var(--success-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--white);
+    font-size: var(--font-size-xl);
+}
+
+.resource-card h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.resource-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.resource-type {
+    display: block;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+}
+
+.contact-info h3,
+.acknowledgments h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-info p {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--gray-50);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--gray-200);
+}
+
+.contact-method i {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    width: 24px;
+    text-align: center;
+}
+
+.acknowledgments p {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.acknowledgments ul {
+    margin-left: var(--spacing-lg);
+    color: var(--gray-600);
+}
+
+.acknowledgments li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+/* UNIFIED RESPONSIVE DESIGN */
+/* All grids now break down consistently on smaller screens */
+
+@media (max-width: 768px) {
+    /* Ensure both page-header and about-content maintain same padding on mobile */
+    .resources-main .page-header {
+        margin: 0 auto var(--spacing-3xl) auto;
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .about-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    /* All card grids use single column on mobile */
+    .science-grid,
+    .team-grid,
+    .impact-grid,
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reference-item {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .ref-links {
+        justify-content: center;
+    }
+    
+    .about-section {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Match very small screen padding */
+    .resources-main .page-header {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .about-content {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    /* Maintain single column for very small screens */
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-cards {
+        gap: var(--spacing-sm);
+    }
+    
+    .ref-links {
+        flex-direction: column;
+    }
+}
+
+/* ENHANCED CARD ALIGNMENT */
+/* Ensure all cards have consistent heights when side-by-side */
+
+@media (min-width: 769px) {
+    .science-grid,
+    .team-grid,
+    .impact-grid,
+    .resource-grid {
+        align-items: stretch; /* Makes cards same height */
+    }
+    
+    .science-principle,
+    .team-member,
+    .impact-metric,
+    .resource-card {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Science cards content distribution */
+    .science-principle {
+        justify-content: space-between;
+    }
+    
+    .science-principle .research-links {
+        margin-top: auto;
+    }
+    
+    /* Team cards content distribution */
+    .team-member {
+        justify-content: space-between;
+    }
+    
+    /* Impact cards are already well-aligned */
+    
+    /* Resource cards content distribution */
+    .resource-card {
+        justify-content: space-between;
+    }
+    
+    .resource-card .resource-type {
+        margin-top: auto;
+    }
+}
+
+/* Accessibility Enhancements */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Enhanced focus indicators */
+.pdf-link:focus,
+.external-link:focus,
+.resource-card:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .stat-card,
+    .science-principle,
+    .team-member,
+    .impact-metric,
+    .reference-item,
+    .resource-card {
+        border: 2px solid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
