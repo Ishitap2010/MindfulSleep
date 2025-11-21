@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mindful Sleep</title>
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip navigation link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <span>Mindful Sleep</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="schedule.html" class="nav-link" role="menuitem">Schedule</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="resources.html" class="nav-link" role="menuitem">Resources</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="community.html" class="nav-link" role="menuitem">Community</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="about.html" class="nav-link active" role="menuitem" aria-current="page">About</a>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resources-main" id="main-content" tabindex="-1">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">About Mindful Sleep</h1>
+                    <p class="page-subtitle">Our mission is to make sleep wellness simple, science-based, and accessible for everyone. 
+                    We believe that understanding your sleep is the first step to improving it; not through complex data, but through 
+                    small daily habits anyone can track.</p>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="about-content">
+
+                <!-- Embedded PDF Viewer (shown by default) -->
+                <section class="pdf-viewer-embedded" id="pdf-viewer-embedded" aria-labelledby="pdf-viewer-heading">
+                    <div class="pdf-embedded-container">
+                        <div class="pdf-embedded-header">
+                            <h3 id="pdf-viewer-heading">Featured Research Document</h3>
+                        </div>
+                        <div class="pdf-embedded-content">
+                            <iframe 
+                                id="pdf-iframe" 
+                                src="pdfs/bibliography.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&zoom=page-width" 
+                                type="application/pdf"
+                                title="Teen Sleep Comprehensive Guide"
+                                allowfullscreen
+                                loading="lazy">
+                                <div class="pdf-fallback">
+                                    <div class="fallback-content">
+                                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                        <h4>PDF Viewer Not Supported</h4>
+                                        <p>Your browser doesn't support embedded PDFs. Please download the file to view it.</p>
+                                        <a href="pdfs/teen-sleep-comprehensive-guide.pdf" id="pdf-download-fallback" class="btn btn-primary" target="_blank" rel="noopener">
+                                            <i class="fas fa-download" aria-hidden="true"></i>
+                                            Download PDF
+                                        </a>
+                                    </div>
+                                </div>
+                            </iframe>
+                        </div>
+                        <div class="pdf-embedded-info">
+                            <div class="pdf-title" id="pdf-title">Comprehensive Guide to Teen Sleep</div>
+                            <!--<div class="pdf-meta" id="pdf-meta">Research Compilation • 2.5 MB • Featured Document</div>-->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                        <span>Mindful Sleep</span>
+                    </div>
+                    <p>Empowering students through sleep education and peer-to-peer learning. Created by students, for students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                        <li><a href="resources.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                        <li><a href="schedule.html"></a></li>
+                        <li><a href="community.html"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindful Sleep. All rights reserved. Designed for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/resources.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
